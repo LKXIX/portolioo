@@ -9,10 +9,6 @@ import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
 import TransitionEffect from "@/components/TransitionEffect";
 import { TypeAnimation } from 'react-type-animation';
-import { SpeedInsights } from "@vercel/speed-insights/next"
-    
-
-
 export default function Home() {
   
   return (
@@ -21,9 +17,10 @@ export default function Home() {
         <title>Liam Karlsson</title>
         <meta
           name="description"
-          content="Explore Liam's Next.js developer portfolio."
+          content="Explore Liam's perosnal portfolio."
         />
       </Head>
+
 
       <TransitionEffect />
       <article
@@ -99,7 +96,7 @@ experience in collaboration & independent work. Dedicated to applying my skills 
           <Image
             className="relative h-auto w-full"
             src={lightBulb}
-            alt="Codebucks"
+            alt="Liam"
           />
         </div>
       </article>
