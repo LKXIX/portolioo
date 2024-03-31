@@ -9,7 +9,7 @@ import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
 import TransitionEffect from "@/components/TransitionEffect";
 import { TypeAnimation } from 'react-type-animation';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
     
 
 
