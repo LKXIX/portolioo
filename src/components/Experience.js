@@ -69,8 +69,7 @@ const Experience = () => {
               time="Aug 2024-Present"
               address="Halmstad, Sweden."
               work="As CEO of Mâlm UF, I proudly lead a newly founded company in the clothing industry. With a passionate ambition, we strive to create and deliver something unique in the fashion world. Our product strategy initially focuses on offering an exclusive line of both zip hoodies, t-shirts and zip sweaters. This strategy has been designed through careful market research and design analysis, which aims to satisfy our customers' needs and expectations through a combination of style and quality.
-              Our clear focus on this specific product category reflects our desire to offer a product experience that truly stands out. Through this initiative, we represent our commitment to innovative design and high quality craftsmanship. We look forward to introducing our unique clothing to the market and establishing ourselves as a prominent player in the fashion industry."
-            />
+              Our clear focus on this specific product category reflects our desire to offer a product experience that truly stands out. Through this initiative, we represent our commitment to innovative design and high quality craftsmanship."
             
             <Details
               position="Receptionist"
@@ -78,7 +77,7 @@ const Experience = () => {
               companyLink="https://nordicwellness.se/vara-klubbar/laholm/laholm-angelholmsvagen/"
               time="Feb 2024-Present"
               address="Laholm, Angelholmsvagen.             "
-              work="In my roll as a receptionist at Nordic Wellness, I have played a pivotal role in delivering exemplary customer service and cultivating a favorable initial impression for our clients. I have adeptly managed a range of responsibilities to facilitate seamless operations, encompassing call handling, subscription management, and administrative tasks. My dedication to surpassing expectations has garnered highly favorable responses."
+              work="Holding the role of receptionist at Nordic Wellness, I have played a pivotal role in delivering exemplary customer service and cultivating a favorable initial impression for our clients. I have adeptly managed a range of responsibilities to facilitate seamless operations, encompassing call handling, subscription management, and administrative tasks. My dedication to surpassing expectations has garnered highly favorable responses."
             />
             <Details
               position="Foreign Exchange Trader"

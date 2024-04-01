@@ -47,7 +47,7 @@ const Education = () => {
             type="Information and media technology"
             time="Aug 2021-Jun 2024"
             place="Kattegatt Tech College, Halmstad"
-            info="Relevant courses included, Web development, Network Technology, Network Security, and Programing in C#."
+            info="Relevant courses included, Web development, coding in replit with languages such as: HTML, CSS & JavaScript and libraries and frameworks such as Node.JS and Express.JS, Network Technology, Network Security, and Programing in C#."
           />
 
           <Details
