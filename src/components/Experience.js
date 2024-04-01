@@ -70,7 +70,7 @@ const Experience = () => {
               address="Halmstad, Sweden."
               work="As CEO of Mâlm UF, I proudly lead a newly founded company in the clothing industry. With a passionate ambition, we strive to create and deliver something unique in the fashion world. Our product strategy initially focuses on offering an exclusive line of both zip hoodies, t-shirts and zip sweaters. This strategy has been designed through careful market research and design analysis, which aims to satisfy our customers' needs and expectations through a combination of style and quality.
               Our clear focus on this specific product category reflects our desire to offer a product experience that truly stands out. Through this initiative, we represent our commitment to innovative design and high quality craftsmanship."
-            
+              /> 
             <Details
               position="Receptionist"
               company="Nordic Wellness"
