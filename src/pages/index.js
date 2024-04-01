@@ -17,7 +17,7 @@ export default function Home() {
         <title>Liam Karlsson</title>
         <meta
           name="description"
-          content="Explore Liam's perosnal portfolio."
+          content="Explore Liam's personal portfolio."
         />
       </Head>
 
