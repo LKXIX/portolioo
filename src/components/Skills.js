@@ -31,7 +31,7 @@ const Skills = () => {
     <div
       ref={ref}
       className="w-full h-[100vh] relative bg-circularLight dark:bg-circularDark  flex items-center justify-center 
-      mb-64 md:mb-32 rounded-full
+      mb-32 md:mb-32 rounded-full
       lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd 
       sm:bg-circularLightSm sm:dark:bg-circularDarkSm lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] 
       "
