@@ -203,7 +203,7 @@ export default function Projects() {
                 
                 Packed with expert tips and tricks, this ebook is your ultimate companion in the world of Forex trading. Connect with the creator and join a community of like-minded individuals on a journey towards financial success."
                 img={proj2}
-                link="https://31214db6-963f-43d6-b0d5-c58dbc7fbae5-00-2fp48im1x2e0k.kirk.replit.dev/"
+                link="https://31214db6-963f-43d6-b0d5-c58dbc7fbae5-00-2fp48im1x2e0k.kirk.replit.dev/" /* <a href="https://31214db6-963f-43d6-b0d5-c58dbc7fbae5-00-2fp48im1x2e0k.kirk.replit.dev/" download>Ladda ner E-bok</a> */
                 github="#"
               />
             </div>
