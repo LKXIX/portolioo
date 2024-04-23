@@ -191,17 +191,20 @@ export default function Projects() {
                 github="#"
               />
             </div>
-             <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="E-BOOK"
-                title="FREE FOREX TRADING E-BOOK"
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Web Application"
+                title="Mâlm UF Web Application"
                 summary="Unlock the World of Forex Trading: A Comprehensive Guide
-                Embark on a journey through the intricacies of Forex trading with this comprehensive ebook. Starting with the foundational principles, delve into the complexities of market analysis, including both fundamental and technical approaches. Learn invaluable risk management strategies to safeguard your investments and discover the art of crafting a personalized trading strategy tailored to your goals. 
+
+                Embark on a journey through the intricacies of Forex trading with this comprehensive ebook. Starting with the foundational principles, delve into the complexities of market analysis, including both fundamental and technical approaches. Learn invaluable risk management strategies to safeguard your investments and discover the art of crafting a personalized trading strategy tailored to your goals.
+                
                 Navigate the landscape of brokerages with confidence and master the often-overlooked aspect of emotional discipline. Gain insights into the diverse participants shaping the market and equip yourself with continuous learning techniques to stay ahead in this dynamic field.
+                
                 Packed with expert tips and tricks, this ebook is your ultimate companion in the world of Forex trading. Connect with the creator and join a community of like-minded individuals on a journey towards financial success."
                 img={proj2}
-                link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
-                github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
+                link="https://31214db6-963f-43d6-b0d5-c58dbc7fbae5-00-2fp48im1x2e0k.kirk.replit.dev/"
+                github="#"
               />
             </div>
             {/*
