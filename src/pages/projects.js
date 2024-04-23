@@ -183,7 +183,7 @@ export default function Projects() {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                type="Featured Project"
+                type="Web Application"
                 title="Mâlm UF Web Application"
                 summary="A web application for Mâlm UF, a Swedish company that specializes in the production of unique and high-quality Clothes. The application is built using HTML, CSS, Javascript, Express.js and Node.js It has a user-friendly interface, a responsive design, and it is mobile-friendly. The application is hosted on Replit."
                 img={proj1}
