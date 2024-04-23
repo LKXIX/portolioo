@@ -191,7 +191,7 @@ export default function Projects() {
                 github="#"
               />
             </div>
-           {/*  <div className="col-span-6 sm:col-span-12">
+             <div className="col-span-6 sm:col-span-12">
               <Project
                 type="E-BOOK"
                 title="FREE FOREX TRADING E-BOOK"
@@ -200,6 +200,7 @@ export default function Projects() {
                 github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
               />
             </div>
+            {/*
             <div className="col-span-6 sm:col-span-12">
               <Project
                 type="Website"
