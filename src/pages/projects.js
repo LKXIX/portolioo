@@ -191,7 +191,7 @@ export default function Projects() {
                 github="#"
               />
             </div>
-           { <div className="col-span-6 sm:col-span-12">
+           <div className="col-span-6 sm:col-span-12">
               <Project
                 type="Website Template"
                 title="NFT collection Website"
@@ -199,7 +199,7 @@ export default function Projects() {
                 link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
                 github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
               />
-            </div>/* 
+            </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
                 type="Website"
@@ -236,7 +236,7 @@ export default function Projects() {
                 link="https://devdreaming.com"
                 github="https://github.com/codebucks27"
               />
-            </div> } */}
+            </div>
           </div>
         </Layout>
       </main>
