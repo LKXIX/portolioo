@@ -6,8 +6,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import proj1 from "../../public/images/projects/Malm UFf.jpg";
-/* import proj2 from "../../public/images/projects/nft-collection-website-cover-image.jpg";
-import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
+import proj2 from "../../public/images/projects/forex.jpg";
+/* import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
 import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
 import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
 import proj6 from "../../public/images/projects/devdreaming.jpg"; */
@@ -193,8 +193,8 @@ export default function Projects() {
             </div>
            {/*  <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website Template"
-                title="NFT collection Website"
+                type="E-BOOK"
+                title="FREE FOREX TRADING E-BOOK"
                 img={proj2}
                 link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
                 github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
