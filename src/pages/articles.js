@@ -20,7 +20,7 @@ import blog15 from "../../public/images/articles/Fundementals.jpg";
 import blog16 from "../../public/images/articles/Sales.jpg";
 import blog17 from "../../public/images/articles/CISCOCYBER.jpg";
 import blog18 from "../../public/images/articles/CCNAv7SEC.jpg";
-
+import blog19 from "../../public/images/articles/CCNAv72.jpg";
 
 import Layout from "@/components/Layout";
 import Link from "next/link";
@@ -274,12 +274,19 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
             img={blog17}
             link="#"
           />
+                                        <Article
+            title="CCNAv7: Switching, Routing, and Wireless Essentials
+            "
+            date="June 13 , 2024"
+            img={blog19}
+            link="/LKCCNAv72.pdf"
+          />
                               <Article
             title="CCNAv7: Enterprise Networking, Security, and Automation
             "
             date="June 02 , 2024"
             img={blog18}
-            link="#"
+            link="/LKCCNAv7SEC.pdf"
           />
           </ul>
         </Layout>
