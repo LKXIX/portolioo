@@ -286,7 +286,7 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
             "
             date="June 02 , 2024"
             img={blog18}
-            link="/LKCCNAv7SEC.pdf"
+            link="/LKCCNAv7sec.pdf"
           />
           </ul>
         </Layout>
