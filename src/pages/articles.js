@@ -21,6 +21,7 @@ import blog16 from "../../public/images/articles/Sales.jpg";
 import blog17 from "../../public/images/articles/CISCOCYBER.jpg";
 import blog18 from "../../public/images/articles/CCNAv7SEC.jpg";
 import blog19 from "../../public/images/articles/CCNAv72.jpg";
+import blog20 from "../../public/images/articles/Leadershipskills.jpg";
 
 import Layout from "@/components/Layout";
 import Link from "next/link";
@@ -287,6 +288,13 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
             date="June 02, 2024"
             img={blog18}
             link="/LKCCNAv7sec.pdf"
+          />
+          <Article
+            title="Leadership: Practical Leadership Skills
+            "
+            date="June 17, 2024"
+            img={blog20}
+            link="https://www.udemy.com/certificate/UC-f2828470-749d-45b1-b5de-8bda1696c9ad/"
           />
           </ul>
         </Layout>
