@@ -277,14 +277,14 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
                                         <Article
             title="CCNAv7: Switching, Routing, and Wireless Essentials
             "
-            date="June 13 , 2024"
+            date="June 13, 2024"
             img={blog19}
             link="/LKCCNAv72.pdf"
           />
                               <Article
             title="CCNAv7: Enterprise Networking, Security, and Automation
             "
-            date="June 02 , 2024"
+            date="June 02, 2024"
             img={blog18}
             link="/LKCCNAv7sec.pdf"
           />
