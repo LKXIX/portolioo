@@ -204,13 +204,13 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
               link="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Walmart%20USA/oX6f9BbCL9kJDJzfg_Walmart%20USA_5HT84wwTYWJvpPf3b_1704551875328_completion_certificate.pdf"
             />
             <Article
-              title="Electronic Arts Software Engineering Job Simulation"
+              title="Electronic Arts - Software Engineering Job Simulation"
               img={blog7}
               date="December 17, 2023"
               link="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Electronic%20Arts/a77WE3de8qrxWferQ_Electronic%20Arts_5HT84wwTYWJvpPf3b_1702845732584_completion_certificate.pdf"
             />
             <Article
-              title="Customer Service Job Simulation
+              title="Fidelity - Customer Service Job Simulation
               "
               date="December 16, 2023"
               img={blog8}
@@ -236,12 +236,12 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
               link="https://www.coursera.org/account/accomplishments/certificate/KPKYJ5J9VNF8"
             />
                                     <Article
-              title="MasterCard Cybersecurity Job Simulation"
+              title="MasterCard - Cybersecurity Job Simulation"
               date="December 17, 2023"
               img={blog12}
               link="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/mastercard/vcKAB5yYAgvemepGQ_Mastercard_5HT84wwTYWJvpPf3b_1702847223489_completion_certificate.pdf"
             />                        <Article
-            title="Red Bull On-Premise Sales Job Simulation
+            title="Red Bull - On-Premise Sales Job Simulation
             "
             date="December 17, 2023"
             img={blog13}
