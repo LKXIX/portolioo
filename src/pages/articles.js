@@ -273,7 +273,7 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
             "
             date="December 06, 2023"
             img={blog17}
-            link="#"
+            link="/LKintrotocybsec.pdf"
           />
                                         <Article
             title="CCNAv7: Switching, Routing, and Wireless Essentials
