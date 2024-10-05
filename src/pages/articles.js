@@ -23,6 +23,7 @@ import blog18 from "../../public/images/articles/CCNAv7SEC.jpg";
 import blog19 from "../../public/images/articles/CCNAv72.jpg";
 import blog20 from "../../public/images/articles/Leadershipskills.jpg";
 import blog21 from "../../public/images/articles/googlecybersec.jpg";
+import blog22 from "../../public/images/articles/googleai";
 
 import Layout from "@/components/Layout";
 import Link from "next/link";
@@ -185,6 +186,12 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
               link="https://www.linkedin.com/learning/certificates/e495bf6d35bba50fd9c12dbfc10a9e1b3db156729e07d4914bb636b9ca13101f"
             />
             <Article
+              title="Google AI Essentials"
+              img={blog22}
+              date="Sept 1, 2024"
+              link="https://www.coursera.org/account/accomplishments/verify/1LTF0GSD4MSQ"
+            />
+            <Article
               title="Cybersecurity Foundations"
               img={blog4}
               date="January 20, 2024"
@@ -303,6 +310,7 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
             img={blog2}
             link="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_5HT84wwTYWJvpPf3b_1702829296488_completion_certificate.pdf"
           />
+          
           </ul>
         </Layout>
       </main>
