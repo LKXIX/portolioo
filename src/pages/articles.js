@@ -23,7 +23,7 @@ import blog18 from "../../public/images/articles/CCNAv7SEC.jpg";
 import blog19 from "../../public/images/articles/CCNAv72.jpg";
 import blog20 from "../../public/images/articles/Leadershipskills.jpg";
 import blog21 from "../../public/images/articles/googlecybersec.jpg";
-import blog22 from "../../public/images/articles/googleai";
+import blog22 from "../../public/images/articles/googleai.jpg";
 
 import Layout from "@/components/Layout";
 import Link from "next/link";
