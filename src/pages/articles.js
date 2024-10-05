@@ -22,6 +22,7 @@ import blog17 from "../../public/images/articles/CISCOCYBER.jpg";
 import blog18 from "../../public/images/articles/CCNAv7SEC.jpg";
 import blog19 from "../../public/images/articles/CCNAv72.jpg";
 import blog20 from "../../public/images/articles/Leadershipskills.jpg";
+import blog21 from "../../public/images/articles/googlecybersec.jpg";
 
 import Layout from "@/components/Layout";
 import Link from "next/link";
@@ -163,12 +164,12 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
             />
 
             <FeaturedArticle
-              img={blog2}
-              title="Software Engineering Job Simulation by Goldman Sachs"
+              img={blog21}
+              title="Google Cybersecurity: Google Cybersecurity Specialization"
               time="1 min read"
-              summary="Completed a job simulation as a Goldman Sachs governance analyst responsible for assessing IT security and suggesting improvements. Identified that the company was using an outdated password hashing algorithm by cracking passwords using Hashcat.
+              summary="This course covers several key areas in cybersecurity, including threat and vulnerability management, incident response, and security frameworks & controls. It also touches on security hardening, emphasizing practical skills in Linux system administration, Linux command line usage, and scripting with SQL and Python. Additionally, students will learn about Security Information and Event Management (SIEM) tools, focusing on monitoring, detecting, and responding to security incidents. This curriculum provides a strong foundation for understanding and managing cybersecurity risks in various IT environments.
               "
-              link="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_5HT84wwTYWJvpPf3b_1702829296488_completion_certificate.pdf"
+              link="https://www.coursera.org/account/accomplishments/specialization/OHYFT3J7E2NV"
             />
           </ul>
 
@@ -296,9 +297,16 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
             img={blog20}
             link="https://www.udemy.com/certificate/UC-f2828470-749d-45b1-b5de-8bda1696c9ad/"
           />
+                    <Article
+            title="Software Engineering Job Simulation by Goldman Sachs"
+            date="December 17, 2023"
+            img={blog2}
+            link="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_5HT84wwTYWJvpPf3b_1702829296488_completion_certificate.pdf"
+          />
           </ul>
         </Layout>
       </main>
     </>
   );
 }
+
