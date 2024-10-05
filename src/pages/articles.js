@@ -188,7 +188,7 @@ Explore Liam's collection of certificates, showcasing his expertise in various a
             <Article
               title="Google AI Essentials"
               img={blog22}
-              date="Sept 1, 2024"
+              date="September 1, 2024"
               link="https://www.coursera.org/account/accomplishments/verify/1LTF0GSD4MSQ"
             />
             <Article
