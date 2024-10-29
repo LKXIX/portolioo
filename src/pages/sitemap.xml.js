@@ -30,7 +30,7 @@ export async function getServerSideProps({ res }) {
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
       </url>
-      <!-- Add more URLs as needed -->
+
     </urlset>`;
   
     // Send the response
