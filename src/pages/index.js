@@ -32,7 +32,7 @@ export default function Home() {
                 src={profilePic}
                 alt="Liam Karlsson"
                 className="h-auto w-full"
-                sizes="100vw"
+                sizes="25vw"
                 priority
               />
             </div>
