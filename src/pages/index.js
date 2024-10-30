@@ -31,7 +31,7 @@ export default function Home() {
               <Image
                 src={profilePic}
                 alt="Liam Karlsson"
-                className="h-128 w-128 md:w-full md:h-auto" 
+                className="h-64 w-64 md:w-full md:h-auto" 
                 sizes="100vw"
                 priority
               />
