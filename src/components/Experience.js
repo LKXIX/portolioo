@@ -62,6 +62,26 @@ const Experience = () => {
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             
+          <Details
+              position="Junior Sales Associate"
+              company="Key Solutions"
+              companyLink="https://www.instagram.com/keysolutionsse/"
+              time="Sept 2024-Present"
+              address="Gothenburg, Sweden."
+              work="As a Junior Sales Associate, I focus on engaging customers and driving sales through effective communication and strategic relationship-building. My role involves identifying and connecting with potential clients, nurturing existing relationships, and ensuring a seamless sales process. I am passionate about understanding each customer's unique needs and offering tailored solutions that provide real value. With a focus on continuous development and learning, I strive to deliver excellent service and contribute to the company's success through strategic negotiations and reliable product knowledge."
+            /> 
+
+          <Details
+              position="Sales Associate"
+              company="Key Solutions"
+              companyLink="https://www.instagram.com/keysolutionsse/"
+              time="Sept 2024-Present"
+              address="Gothenburg, Sweden."
+              work="Traveling Salesperson | Direct Sales | Customer Relationship Building
+
+As a traveling salesperson, I specialize in selling products and services directly to end customers. My work involves regular travel to meet both potential and existing clients, where I focus on building strong, long-term relationships and ensuring successful deals. I am passionate about understanding each customer's unique needs and offering solutions that create real value. With my ability to communicate effectively, negotiate strategically, and provide reliable product knowledge, I help customers make informed decisions while contributing to the growth of the company."
+            /> 
+
             <Details
               position="Cheif Executive Officer"
               company="Mâlm UF"
