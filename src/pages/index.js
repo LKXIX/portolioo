@@ -25,17 +25,16 @@ export default function Home() {
       <article
         className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start`}
       >
-      <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
-  <div className="flex w-full items-start justify-between md:flex-col">
-    <div className="w-1/2 lg:hidden md:inline-block md:w-full">
-      <Image
-        src={profilePic}
-        alt="Liam Karlsson"
-        className="h-48 w-48 md:w-full md:h-auto" // Adjusted width and height
-        sizes="100vw"
-        priority
-      />
-    </div>
+        <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
+          <div className="flex w-full items-start justify-between md:flex-col">
+            <div className="w-1/2 lg:hidden md:inline-block md:w-full">
+              <Image
+                src={profilePic}
+                alt="Liam Karlsson"
+                className="h-48 w-48 md:w-full md:h-auto" 
+                sizes="100vw"
+                priority
+              />
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
               
