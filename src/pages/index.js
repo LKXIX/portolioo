@@ -28,13 +28,13 @@ export default function Home() {
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
             <div className="w-1/2 lg:hidden md:inline-block md:w-full">
-              <Image
-                src={profilePic}
-                alt="Liam Karlsson"
-                className="h-100 w-100 md:w-full md:h-auto" 
-                sizes="100vw"
-                priority
-              />
+            <Image
+  src={profilePic}
+  alt="Liam Karlsson"
+  className="w-32 h-32 sm:w-48 sm:h-48 md:w-full md:h-auto" // Adjust sizes for different breakpoints
+  sizes="(max-width: 768px) 100vw, 50vw" // Adjust image size according to screen width
+  priority
+/>
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
               
