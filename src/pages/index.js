@@ -31,7 +31,7 @@ export default function Home() {
             <Image
   src={profilePic}
   alt="Liam Karlsson"
-  className="w-70 h-70 sm:w-48 sm:h-48 md:w-full md:h-auto" // Adjust sizes for different breakpoints
+  className="w-70 h-70 sm:w-48 sm:h-48 md:w-full md:h-auto rounded-lg" // Adjust sizes for different breakpoints
   sizes="(max-width: 768px) 100vw, 50vw" // Adjust image size according to screen width
   priority
 />
