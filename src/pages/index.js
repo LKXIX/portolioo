@@ -79,7 +79,7 @@ experience in collaboration & independent work. Dedicated to applying my skills 
                 </Link>
 
                 <Link
-                  href="mailto:karlssonliam05@gmail.com"
+                  href="mailto:business@liamkarlsson.com"
                   className="ml-4 text-lg font-medium capitalize text-dark underline 
                   dark:text-light md:text-base"
                 >

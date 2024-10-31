@@ -39,7 +39,7 @@ export default function About() {
     <>
       <Head>
         <title>About Page</title>
-        <meta name="description" content="Learn more about Liam Karlsson, a Next.js developer with a passion for 
+        <meta name="description" content="Learn more about Liam Karlsson, a Web developer with a passion for 
         creating innovative solutions. Discover tips for building a developer portfolio and insights on 
         full-stack development, front-end development, and back-end development." />
       </Head>
