@@ -26,12 +26,11 @@ export default function Home() {
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="w-1/4 hidden md:block"> {/* Hide on small screens, show on md and up */}
+            <div className="w-1/4 hidden md:inline-block"> {/* Show on medium screens and up */}
               <Image
                 src={profilePic}
                 alt="Liam Karlsson"
-                className="w-70 h-70 sm:w-48 sm:h-48 md:w-full md:h-auto rounded-lg"
-                sizes="(max-width: 768px) 100vw, 50vw" // This is optional based on your layout needs
+                className="w-70 h-70 sm:w-48 sm:h-48 rounded-lg" // Size for larger screens
                 priority
               />
             </div>
@@ -80,7 +79,7 @@ export default function Home() {
         </Layout>
 
         <HireMe />
-        <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
+        <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden"> {/* This element is only visible on smaller screens */}
           <Image
             className="relative h-auto w-full"
             src={lightBulb}
