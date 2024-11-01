@@ -8,18 +8,14 @@ import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import profilePic from "../../public/images/profile/liam2.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
 import { TypeAnimation } from 'react-type-animation';
+
 export default function Home() {
-  
   return (
     <>
       <Head>
         <title>Liam Karlsson</title>
-        <meta
-          name="description"
-          content="Explore Liam's personal portfolio."
-        />
+        <meta name="description" content="Explore Liam's personal portfolio." />
       </Head>
-
 
       <TransitionEffect />
       <article
@@ -27,52 +23,44 @@ export default function Home() {
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="w-1/4 lg:hidden md:inline-block md:w-full">
-{/*            <Image
-  src={profilePic}
-  alt="Liam Karlsson"
-  className="w-70 h-70 sm:w-48 sm:h-48 md:w-full md:h-auto rounded-lg" // Adjust sizes for different breakpoints
-  sizes="(max-width: 768px) 100vw, 50vw" // Adjust image size according to screen width
-  priority
-/> */}
-            </div>
-            <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
+            {/* Profile Image Section - Uncomment if needed */}
+            {/* <div className="w-1/4 lg:hidden md:inline-block md:w-full">
+              <Image
+                src={profilePic}
+                alt="Liam Karlsson"
+                className="w-70 h-70 sm:w-48 sm:h-48 md:w-full md:h-auto rounded-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div> */}
+            <div className="flex w-3/4 flex-col items-start self-center lg:w-full lg:text-left"> {/* Changed 'items-center' to 'items-start' */}
               
-            <TypeAnimation
-  sequence={[
-    'Liam Karlsson',
-    1200, // wait 1s before replacing the text
-    'Turning vision into reality with code & design.',
-    1200,
-  ]}
-  wrapper="span"
-  speed={50}
-  style={{ display: 'inline-block' }} // inline-block is required for the animation
-  repeat={Infinity}
-  className="py-2  mx-auto flex-col items-center justify-center overflow-hidden sm:py-0 inline-block text-dark dark:text-light text-6xl font-bold w-full capitalize xl:text-6xl"
-/>
-             {/*  <AnimatedText
-                text="Turning vision into reality with code and design."
-                className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
-              /> */}
+              <TypeAnimation
+                sequence={[
+                  'Liam Karlsson',
+                  1200,
+                  'Turning vision into reality with code & design.',
+                  1200,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ display: 'inline-block' }}
+                repeat={Infinity}
+                className="py-2 overflow-hidden text-dark dark:text-light text-6xl font-bold w-full capitalize xl:text-6xl"
+              />
 
-              
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-              Enthusiastic student with technical skills and
-experience in collaboration & independent work. Dedicated to applying my skills to solve problems, support and improve the working environment. I am comitted to turning ideas into innovative applications. Explore my latest projects and certificates, showcasing my expertise in every realm.
+                Enthusiastic student with technical skills and
+                experience in collaboration & independent work. Dedicated to applying my skills to solve problems, support and improve the working environment. I am committed to turning ideas into innovative applications. Explore my latest projects and certificates, showcasing my expertise in every realm.
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
-                  // whileHover={{
-                  //   cursor: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='font-size:24px;'><text y='50%'>👆</text></svg>"), auto`,
-                  // }}
                   href="/LK.pdf"
                   target={"_blank"}
                   className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
-            capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
-            dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-            md:p-2 md:px-4 md:text-base
-             `}
+                    capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
+                    dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+                    md:p-2 md:px-4 md:text-base`}
                   download
                 >
                   Resume <LinkArrow className="ml-1 !w-6 md:!w-4" />
@@ -81,7 +69,7 @@ experience in collaboration & independent work. Dedicated to applying my skills 
                 <Link
                   href="mailto:business@liamkarlsson.com"
                   className="ml-4 text-lg font-medium capitalize text-dark underline 
-                  dark:text-light md:text-base"
+                    dark:text-light md:text-base"
                 >
                   Contact
                 </Link>
