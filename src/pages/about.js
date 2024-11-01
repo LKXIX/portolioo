@@ -101,14 +101,15 @@ export default function About() {
         dark:bg-light  "
               />
               <Image
-                className="h-auto w-full rounded-2xl md:inline hidden"
-                src={profile}
-                alt="Liam Karlsson"
-                sizes="(max-width: 768px) 50vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-                priority
-              />
+  className="h-auto w-full rounded-2xl hidden md:block"
+  src={profile}
+  alt="Liam Karlsson"
+  sizes="(max-width: 768px) 50vw,
+        (max-width: 1200px) 50vw,
+        33vw"
+  priority
+/>
+
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row 
             xl:items-center md:order-3">
