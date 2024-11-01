@@ -14,10 +14,7 @@ export default function Home() {
     <>
       <Head>
         <title>Liam Karlsson</title>
-        <meta
-          name="description"
-          content="Explore Liam's personal portfolio."
-        />
+        <meta name="description" content="Explore Liam's personal portfolio." />
       </Head>
 
       <TransitionEffect />
@@ -26,11 +23,11 @@ export default function Home() {
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="hidden md:w-1/4 md:inline-block"> {/* Hide on mobile and show on medium screens and up */}
+            <div className="w-1/4 hidden md:block"> {/* This will hide the image on mobile */}
               <Image
                 src={profilePic}
                 alt="Liam Karlsson"
-                className="w-70 h-70 sm:w-48 sm:h-48 md:w-full md:h-auto rounded-lg" // Size for larger screens
+                className="rounded-lg w-full h-auto" // Adjusted to ensure proper sizing
                 priority
               />
             </div>
