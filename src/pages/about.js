@@ -104,7 +104,7 @@ export default function About() {
                 className="h-auto w-full rounded-2xl"
                 src={profile}
                 alt="Liam Karlsson"
-                sizes="(max-width: 768px) 50vw,
+                //sizes="(max-width: 768px) 50vw,
               (max-width: 1200px) 50vw,
               33vw"
                 priority
