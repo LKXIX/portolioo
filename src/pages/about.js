@@ -101,10 +101,10 @@ export default function About() {
         dark:bg-light  "
               />
               <Image
-                className="h-auto w-full rounded-2xl"
+                className="h-auto w-full rounded-2xl md:block"
                 src={profile}
                 alt="Liam Karlsson"
-                sizes="
+                sizes="(max-width: 768px) 50vw,
               (max-width: 1200px) 50vw,
               33vw"
                 priority
