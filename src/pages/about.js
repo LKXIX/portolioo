@@ -101,7 +101,7 @@ export default function About() {
         dark:bg-light  "
               />
               <Image
-                className="h-auto w-full rounded-2xl md:block"
+                className="h-auto w-full rounded-2xl md:inline hidden"
                 src={profile}
                 alt="Liam Karlsson"
                 sizes="(max-width: 768px) 50vw,
