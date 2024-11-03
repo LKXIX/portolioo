@@ -166,8 +166,8 @@ export default function Projects() {
         <title>Projects Page</title>
         <meta
           name="description"
-          content="Discover the latest webapp projects created by Liam Karlsson, a Next.js developer with 
-        expertise in React.js and full-stack development. Browse software engineering articles and tutorials for tips on creating your own portfolio."
+          content="Discover the latest webapp projects created by Liam Karlsson, a developer with 
+        expertise in React.js and full-stack development. Browse software engineering articles and see the certificates that Liam has earned."
         />
       </Head>
 
@@ -194,7 +194,7 @@ export default function Projects() {
             <div className="col-span-12">
               <FeaturedProject
                 type="Web Application"
-                title="Mâlm UF Web Application"
+                title="Forex Trading Guide"
                 summary="Unlock the World of Forex Trading: A Comprehensive Guide
 
                 Embark on a journey through the intricacies of Forex trading with this comprehensive ebook. Starting with the foundational principles, delve into the complexities of market analysis, including both fundamental and technical approaches. Learn invaluable risk management strategies to safeguard your investments and discover the art of crafting a personalized trading strategy tailored to your goals.

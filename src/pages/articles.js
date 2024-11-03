@@ -143,7 +143,7 @@ export default function Articles() {
       <Head>
         <title>Achievements Page</title>
         <meta name="description" content="
-Explore Liam's collection of certificates, showcasing his expertise in various areas of digital design and development. Gain valuable insights and stay up-to-date with SEO tips for building a developer portfolio, ensuring maximum visibility and impact in the competitive tech industry. Whether you're a seasoned professional or just starting your journey, Liam's portfolio offers inspiration and practical advice for advancing your career and achieving success in the digital landscape." />
+Explore Liam Karlsson's collection of certificates, showcasing his expertise in various areas of digital design and development. Gain valuable insights and stay up-to-date with SEO tips for building a developer portfolio, ensuring maximum visibility and impact in the competitive tech industry. Whether you're a seasoned professional or just starting your journey, Liam's portfolio offers inspiration and practical advice for advancing your career and achieving success in the digital landscape." />
       </Head>
       <TransitionEffect />
       <main

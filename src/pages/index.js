@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Head>
         <title>Liam Karlsson</title>
-        <meta name="description" content="Explore Liam's personal portfolio." />
+        <meta name="description" content="Explore Liam Karlsson's personal portfolio." />
       </Head>
 
       <TransitionEffect />
@@ -83,7 +83,7 @@ export default function Home() {
           <Image
             className="relative h-auto w-full"
             src={lightBulb}
-            alt="Liam"
+            alt="Liam Karlsson"
           />
         </div>
       </article>
