@@ -63,7 +63,18 @@ const Experience = () => {
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             
           <Details
-              position="Fact Checker & Copy writing Freelancer"
+              position="Freelancing Web developer & Webdesigner"
+              company="Liam Karlsson"
+              companyLink="https://liamkarlsson.com"
+              time="Mar 2024-Present"
+              address="Halmstad, Sweden."
+              work="I offer tailored web solutions that combine creative design with technical expertise to create user-friendly and efficient websites. By focusing on both visual impact and functionality, I ensure that each project reflects your brand and engages your visitors. With a strong emphasis on strategic SEO, I also help optimize websites for search engines, increasing visibility and driving organic traffic.
+
+Explore my work at liamkarlsson.com."
+            /> 
+
+          <Details
+              position="Freelancing Fact Checker & Copy writing"
               company="Outlier AI"
               companyLink="https://outlier.ai/"
               time="Nov 2024-Feb 2025"
