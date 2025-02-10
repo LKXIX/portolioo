@@ -24,6 +24,7 @@ import blog19 from "../../public/images/articles/CCNAv72.jpg";
 import blog20 from "../../public/images/articles/Leadershipskills.jpg";
 import blog21 from "../../public/images/articles/googlecybersec.jpg";
 import blog22 from "../../public/images/articles/googleai.jpg";
+import blog23 from "../../public/images/articles/Myndighet.jpg";
 
 import Layout from "@/components/Layout";
 import Link from "next/link";
@@ -210,6 +211,12 @@ Explore Liam Karlsson's collection of certificates, showcasing his expertise in 
               img={blog6}
               date="January 06, 2024"
               link="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Walmart%20USA/oX6f9BbCL9kJDJzfg_Walmart%20USA_5HT84wwTYWJvpPf3b_1704551875328_completion_certificate.pdf"
+            />
+            <Article
+              title="Digital informationssäkerhetsutbildning för alla (Disa)"
+              img={blog23}
+              date="February 10, 2024"
+              link="https://media.licdn.com/dms/document/media/v2/D4D2DAQGwg9f3Abauzg/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1738761652350?e=1740009600&v=beta&t=LvHu2DhB6BO-_gsS99qotkj5wYnfFMUawhpcuIPt0AA"
             />
             <Article
               title="Electronic Arts - Software Engineering Job Simulation"
