@@ -8,6 +8,7 @@ import Link from "next/link";
 import proj1 from "../../public/images/projects/Malm.jpg";
 import proj2 from "../../public/images/projects/forex.jpg";
 import proj3 from "../../public/images/projects/mkdesign.jpg";
+import proj4 from "../../public/images/projects/LKportfolio.jpg";
 /* import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
 import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
 import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
@@ -191,6 +192,17 @@ For more details, visit: mkdesigngolv.com.
 "
                 img={proj3}
                 link="https://mkdesigngolv.com"
+                github="#"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Web Application"
+                title="Liam Karlsson's Portfolio Website"
+                summary="LiamKarlsson.com – My personal portfolio website designed to showcase my achievements, skills, and projects. It serves as a central hub for employers and clients to easily explore what I'm capable of. The site highlights my expertise in web development, design, and SEO, demonstrating my ability to create modern, responsive, and high-performing applications. The webpage is built with HTML, Tailwind CSS, Javascript, React and Next.js
+"
+                img={proj4}
+                link="https://liamkarlsson.com"
                 github="#"
               />
             </div>
