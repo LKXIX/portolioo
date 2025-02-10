@@ -188,13 +188,6 @@ export default function Projects() {
                 title="MK Designgolv Website"
                 summary="A web application for MK Designgolv AB, a Swedish company specializing in high-quality and uniquely designed flooring solutions. The application is built using Hostinger Website Builder, featuring a user-friendly interface, responsive design, and mobile compatibility. It is hosted on Hostinger and provides a seamless browsing experience for customers.
 For more details, visit: mkdesigngolv.com.
-
-
-
-
-
-
-
 "
                 img={proj3}
                 link="https://mkdesigngolv.com"
