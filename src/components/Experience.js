@@ -63,6 +63,16 @@ const Experience = () => {
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             
           <Details
+              position="Senior Sales Associate"
+              company="Key Solutions"
+              companyLink="https://www.keysolutions.se/?gad_source=1&gclid=CjwKCAiA5Ka9BhB5EiwA1ZVtvDec_k5AxNKHIMpYIfegbnUAlsFyFj0L_Pm67xZwfuoXO-yQHdeswRoCEGAQAvD_BwE"
+              time="Sept 2024-Present"
+              address="Gothenburg, Sweden."
+              work="As a Senior Sales Associate, I have a strategic responsibility to develop and drive sales by building long-term customer relationships and identifying new business opportunities. My role involves leading client meetings, conducting cold outreach, performing in-depth needs analyses, and delivering tailored solutions that create added value. I work closely with the team to optimize the sales process and ensure high customer satisfaction while also contributing to the team’s growth through mentorship and sharing insights from my experience.
+With a strong results-driven mindset and a passion for relationship-building, I strive to be a trusted partner for clients and a key contributor to the company’s growth and success."
+            /> 
+
+          <Details
               position="Junior Sales Associate"
               company="Key Solutions"
               companyLink="https://www.instagram.com/keysolutionsse/"
