@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import proj1 from "../../public/images/projects/Malm.jpg";
 import proj2 from "../../public/images/projects/forex.jpg";
+import proj3 from "../../public/images/projects/mkdesign.jpg";
 /* import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
 import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
 import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
@@ -181,6 +182,25 @@ export default function Projects() {
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+          <div className="col-span-12">
+              <FeaturedProject
+                type="Web Application"
+                title="MK Designgolv Website"
+                summary="A web application for MK Designgolv AB, a Swedish company specializing in high-quality and uniquely designed flooring solutions. The application is built using Hostinger Website Builder, featuring a user-friendly interface, responsive design, and mobile compatibility. It is hosted on Hostinger and provides a seamless browsing experience for customers.
+For more details, visit: mkdesigngolv.com.
+
+
+
+
+
+
+
+"
+                img={proj3}
+                link="https://mkdesigngolv.com"
+                github="#"
+              />
+            </div>
             <div className="col-span-12">
               <FeaturedProject
                 type="Web Application"
