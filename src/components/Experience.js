@@ -63,6 +63,17 @@ const Experience = () => {
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             
           <Details
+              position="Fact Checker & Copy writing Freelancer"
+              company="Outlier AI"
+              companyLink="https://outlier.ai/"
+              time="Nov 2024-Feb 2025"
+              address="Oakland, America."
+              work="As a freelance Swedish writer at Outlier.ai, I contribute to improving generative AI models by providing human feedback. My role involves reviewing and ranking AI-generated texts in Swedish, writing short stories, and verifying the factual accuracy of AI-produced content. I help ensure that AI systems maintain high quality and performance.
+
+This remote position offers the flexibility to work whenever and wherever it suits me while contributing to the advancement of cutting-edge AI technology.
+With a strong results-driven mindset and a passion for relationship-building, I strive to be a trusted partner for clients and a key contributor to the company’s growth and success."
+            /> 
+          <Details
               position="Senior Sales Associate"
               company="Key Solutions"
               companyLink="https://www.keysolutions.se/?gad_source=1&gclid=CjwKCAiA5Ka9BhB5EiwA1ZVtvDec_k5AxNKHIMpYIfegbnUAlsFyFj0L_Pm67xZwfuoXO-yQHdeswRoCEGAQAvD_BwE"
@@ -105,7 +116,7 @@ As a traveling salesperson, I specialize in selling products and services direct
               position="Receptionist"
               company="Nordic Wellness"
               companyLink="https://nordicwellness.se/vara-klubbar/laholm/laholm-angelholmsvagen/"
-              time="Feb 2024-Present"
+              time="Feb 2024-Feb 2025"
               address="Laholm, Angelholmsvagen.             "
               work="Holding the role of receptionist at Nordic Wellness, I have played a pivotal role in delivering exemplary customer service and cultivating a favorable initial impression for our clients. I have adeptly managed a range of responsibilities to facilitate seamless operations, encompassing call handling, subscription management, and administrative tasks. My dedication to surpassing expectations has garnered highly favorable responses."
             />
