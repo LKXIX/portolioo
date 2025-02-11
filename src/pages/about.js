@@ -60,8 +60,8 @@ export default function About() {
                 BIOGRAPHY
               </h2>
               <p className="font-medium ">
-                Hi, I&apos;m <strong>Liam Karlsson</strong>, a Swedish Tech student born 2005, now working as a part time freelancer with a passion for creating beautiful,
-                functional, and user-centered digital experiences. With 2 years
+                Hi, I&apos;m <strong>Liam Karlsson</strong>, a Swedish Cyber Security Specialist, IT-support born 2005, also working as a part time freelancer with a passion for creating beautiful,
+                functional, and user-centered digital experiences. With 3 years
                 of experience in the field. I am always looking for new and
                 innovative ways to bring my clients&apos; visions to life.
               </p>
