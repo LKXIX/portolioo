@@ -68,9 +68,13 @@ const Experience = () => {
               companyLink="https://axami.se"
               time="Dec 2024-Present"
               address="Halmstad, Sweden."
-              work="I offer tailored web solutions that combine creative design with technical expertise to create user-friendly and efficient websites. By focusing on both visual impact and functionality, I ensure that each project reflects your brand and engages your visitors. With a strong emphasis on strategic SEO, I also help optimize websites for search engines, increasing visibility and driving organic traffic.
+              work="As a Security Technician and IT Support Specialist at Axami Systems, I work to ensure a reliable and secure IT infrastructure. I am responsible for monitoring maintenance systems, overseeing operations, documenting processes, and swiftly addressing any technical issues. My work has contributed to reducing security incidents and increasing system availability, providing both the company and our customers with a safe and stable environment.
 
-Explore my work at liamkarlsson.com."
+Beyond security operations, I provide technical support to both internal users and customers. I efficiently resolve issues, ensuring they are addressed in a manner that is both swift and sustainable in the long term. By optimizing processes and improving system performance, I have helped save time and resources, adding value to the business.
+
+In addition to my technical responsibilities, I also serve as the company’s representative. I am responsible for sales, training, and demonstrations of the maintenance system, ensuring that customers not only understand its features but also recognize its value in optimizing their operations.
+
+With a combination of technical expertise and problem-solving skills, I contribute to maintaining the high standard of the company’s solutions and ensuring that the business continues to evolve in line with customer needs."
             /> 
 
           <Details
