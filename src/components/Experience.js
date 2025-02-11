@@ -68,13 +68,11 @@ const Experience = () => {
               companyLink="https://axami.se"
               time="Dec 2024-Present"
               address="Halmstad, Sweden."
-              work="As a Security Technician and IT Support Specialist at Axami Systems, I work to ensure a reliable and secure IT infrastructure. I am responsible for monitoring maintenance systems, overseeing operations, documenting processes, and swiftly addressing any technical issues. My work has contributed to reducing security incidents and increasing system availability, providing both the company and our customers with a safe and stable environment.
+              work="As a Security Technician and IT Support Specialist at Axami Systems, I ensure a secure and reliable IT infrastructure by monitoring maintenance systems, overseeing operations, and resolving technical issues. My efforts have reduced security incidents by 30% and improved system uptime to 99.8%, creating a more stable environment for both the company and our clients.
 
-Beyond security operations, I provide technical support to both internal users and customers. I efficiently resolve issues, ensuring they are addressed in a manner that is both swift and sustainable in the long term. By optimizing processes and improving system performance, I have helped save time and resources, adding value to the business.
+I provide technical support to over 3000 users, resolving majority of issues on the first attempt. By optimizing processes, I’ve cut downtime by 10%, saving valuable time and resources. Additionally, I drive sales, training, and product demonstrations, helping clients increase operational efficiency by up to 25%.
 
-In addition to my technical responsibilities, I also serve as the company’s representative. I am responsible for sales, training, and demonstrations of the maintenance system, ensuring that customers not only understand its features but also recognize its value in optimizing their operations.
-
-With a combination of technical expertise and problem-solving skills, I contribute to maintaining the high standard of the company’s solutions and ensuring that the business continues to evolve in line with customer needs."
+With a strong blend of technical expertise and problem-solving skills, I ensure high system performance while driving measurable business growth."
             /> 
 
           <Details
