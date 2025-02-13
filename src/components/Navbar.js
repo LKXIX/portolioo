@@ -99,7 +99,7 @@ const Navbar = () => {
         className="flex items-center justify-center flex-wrap lg:mt-2
       "
       >
-        <motion.a
+      {/*   <motion.a
           target={"_blank"}
           className="w-6 mr-3"
           href="https://twitter.com/LiamK_FX"
@@ -108,7 +108,7 @@ const Navbar = () => {
           aria-label="Checkout my twitter profile"
         >
           <TwitterIcon />
-        </motion.a>
+        </motion.a> */}
         <motion.a
           target={"_blank"}
           className="w-6 mx-3"
