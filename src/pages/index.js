@@ -50,7 +50,7 @@ export default function Home() {
               />
 
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-                My name is Liam Karlsson, an enthusiastic student with technical skills and
+                My name is Liam Karlsson, an enthusiastic freelancer with technical skills and
                 experience in collaboration & independent work. Dedicated to applying my skills to solve problems, support and improve the working environment. I am committed to turning ideas into innovative applications. Explore my latest projects and certificates, showcasing my expertise in every realm.
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
