@@ -7,19 +7,52 @@ import Link from "next/link";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const AIChatHero = dynamic(
+  () => import("@/components/ui/v0-ai-chat").then((m) => m.AIChatHero),
+  { ssr: false }
+);
 
 const pressLogos = [
-  { name: "Hallandsposten", href: "https://www.hallandsposten.se/hallands-affarer/liam-karlsson-fran-veinge-jagar-drommen-i-silicon-valley.f089823e-ee42-4222-90a2-0dc97333bde3" },
-  { name: "Breakit", href: "https://www.breakit.se/artikel/45777/ai-mode-och-lovable-for-hardvara-har-ar-de-senaste-bolagen-i-breakits-varld" },
-  { name: "Skaraborgs Allehanda", href: "https://www.sla.se/2026/03/12/tibrosonen-i-silicon-valley-vaga-dromma-oerhort-stort-6f864/" },
-  { name: "Yuncture", href: "https://www.yuncture.com/news/20-och-23-aringarna-bakom-rankad-antagna-till-silicon-valleys-the-residency" },
-];
-
-const stats = [
-  { value: "50+", label: "Client Projects" },
-  { value: "#25", label: "The Residency SF" },
-  { value: "3,500+", label: "Global Applicants" },
-  { value: "4.6★", label: "Trustpilot" },
+  {
+    name: "Hallandsposten",
+    href: "https://www.hallandsposten.se/hallands-affarer/liam-karlsson-fran-veinge-jagar-drommen-i-silicon-valley.f089823e-ee42-4222-90a2-0dc97333bde3",
+    img: "/images/press/hallandsposten.png",
+    height: 40,
+    maxWidth: "180px",
+  },
+  {
+    name: "Breakit",
+    href: "https://www.breakit.se/artikel/45777/ai-mode-och-lovable-for-hardvara-har-ar-de-senaste-bolagen-i-breakits-varld",
+    img: "/images/press/breakit.png",
+    height: 34,
+    maxWidth: "130px",
+  },
+  {
+    name: "Skaraborgs Allehanda",
+    href: "https://www.sla.se/2026/03/12/tibrosonen-i-silicon-valley-vaga-dromma-oerhort-stort-6f864/",
+    img: "/images/press/sla.svg",
+    height: 56,
+    width: "93px",
+    maxWidth: "93px",
+  },
+  {
+    name: "Sveriges Radio",
+    href: "https://sverigesradio.se",
+    img: "/images/press/sveriges-radio.svg",
+    height: 56,
+    width: "160px",
+    maxWidth: "160px",
+  },
+  {
+    name: "Yuncture",
+    href: "https://www.yuncture.com/news/20-och-23-aringarna-bakom-rankad-antagna-till-silicon-valleys-the-residency",
+    img: "/images/press/yuncture.svg",
+    height: 34,
+    width: "214px",
+    maxWidth: "214px",
+  },
 ];
 
 const faqSchema = {
@@ -117,85 +150,126 @@ export default function Home() {
       </Head>
 
       <TransitionEffect />
-      <article className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start`}>
+      <article className="flex min-h-screen items-center text-dark dark:text-light sm:items-start">
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
-          <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="flex w-3/4 flex-col items-start self-center lg:w-full lg:text-left">
 
-              <h1 className="py-2 overflow-hidden text-dark dark:text-light text-6xl font-bold w-full capitalize xl:text-6xl">
-                Liam Karlsson
-              </h1>
+          {/* Centered hero */}
+          <div className="flex flex-col items-center text-center w-full max-w-3xl mx-auto">
 
-              <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-                Swedish entrepreneur and co-founder of{" "}
-                <a href="https://rankad.ai" target="_blank" rel="noopener nofollow" className="underline underline-offset-2">Rankad.ai</a>
-                {" "}— an autonomous AI search optimization platform helping brands win inside ChatGPT, Gemini, and Perplexity.
-                Also founder of{" "}
-                <a href="https://lkinnovations.se" target="_blank" rel="noopener nofollow" className="underline underline-offset-2">LK Innovations AB</a>,
-                {" "}a web agency with 50+ delivered projects and a 4.6 Trustpilot rating.
-                Selected Founder in Residence at{" "}The Residency, San Francisco.
-                Explore my{" "}
-                <Link href="/projects" className="underline underline-offset-2">projects</Link>,{" "}
-                <Link href="/about" className="underline underline-offset-2">background</Link>, and{" "}
-                <Link href="/articles" className="underline underline-offset-2">certifications</Link>.
-              </p>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="py-2 text-dark dark:text-light text-6xl font-bold capitalize xl:text-5xl md:text-4xl sm:text-3xl"
+            >
+              Liam Karlsson
+            </motion.h1>
 
-              {/* Stats row */}
-              <div className="grid grid-cols-4 gap-4 my-6 w-full sm:grid-cols-2">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="flex flex-col items-start">
-                    <span className="text-2xl font-bold text-primary dark:text-primaryDark md:text-xl">
-                      {stat.value}
-                    </span>
-                    <span className="text-xs text-dark/60 dark:text-light/60 font-medium">{stat.label}</span>
-                  </div>
-                ))}
-              </div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mt-2 text-sm font-medium text-dark/50 dark:text-light/50 tracking-widest uppercase"
+            >
+              Co-founder @ Rankad.ai · Founder @ LK Innovations · The Residency SF
+            </motion.p>
 
-              <div className="mt-2 flex items-center self-start lg:self-center">
-                <Link
-                  href="/Liam Karlsson CV.pdf"
-                  target="_blank"
-                  rel="noopener"
-                  className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
-                    capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark
-                    dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-                    md:p-2 md:px-4 md:text-base`}
-                  download
-                >
-                  Resume <LinkArrow className="ml-1 !w-6 md:!w-4" />
-                </Link>
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-8 flex items-center justify-center gap-4 flex-wrap"
+            >
+              <Link
+                href="mailto:business@liamkarlsson.com"
+                className="flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-base font-semibold
+                  text-light hover:border-dark hover:bg-transparent hover:text-dark
+                  dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+                  transition-all duration-200 md:p-2 md:px-4"
+              >
+                Get in Touch <LinkArrow className="ml-1 !w-5" />
+              </Link>
+              <Link
+                href="/projects"
+                className="text-base font-medium text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light underline underline-offset-4 transition-colors"
+              >
+                View my work
+              </Link>
+            </motion.div>
 
-                <Link
-                  href="mailto:business@liamkarlsson.com"
-                  className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
-                >
-                  Contact
-                </Link>
-              </div>
+            {/* AI Chat Widget */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-12 w-full"
+            >
+              <AIChatHero />
+            </motion.div>
 
-            </div>
           </div>
 
-          {/* Press / Social Proof bar */}
-          <div className="mt-16 w-full border-t border-solid border-dark/10 dark:border-light/10 pt-8">
-            <p className="text-xs font-semibold uppercase tracking-widest text-dark/40 dark:text-light/40 mb-4 text-center">
+          {/* Press bar — guaranteed dark background */}
+          <div
+            className="mt-20 w-full rounded-2xl px-8 py-10"
+            style={{ backgroundColor: "#0a0a0a" }}
+          >
+            <p
+              className="text-xs font-semibold uppercase tracking-widest mb-8 text-center"
+              style={{ color: "rgba(240,240,240,0.35)" }}
+            >
               As seen in
             </p>
-            <div className="flex flex-wrap gap-6 justify-center items-center">
+
+            {/* Logos — forced white with inline filter */}
+            <div className="flex flex-wrap gap-10 justify-center items-center mb-10">
               {pressLogos.map((p) => (
                 <motion.a
                   key={p.name}
                   href={p.href}
                   target="_blank"
                   rel="noopener nofollow"
-                  whileHover={{ y: -2 }}
-                  className="text-sm font-semibold text-dark/50 dark:text-light/50 hover:text-primary dark:hover:text-primaryDark transition-colors duration-200"
+                  whileHover={{ y: -3 }}
+                  aria-label={p.name}
+                  style={{ opacity: 0.45, transition: "opacity 0.25s" }}
+                  onMouseEnter={e => e.currentTarget.style.opacity = "1"}
+                  onMouseLeave={e => e.currentTarget.style.opacity = "0.45"}
                 >
-                  {p.name}
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    style={{
+                      height: p.height,
+                      width: p.width || "auto",
+                      maxWidth: p.maxWidth || "180px",
+                      objectFit: "contain",
+                      filter: "brightness(0) invert(1)",
+                      display: "block",
+                    }}
+                  />
                 </motion.a>
               ))}
             </div>
+
+            {/* Bio below logos */}
+            <p
+              className="text-center text-sm leading-relaxed max-w-2xl mx-auto"
+              style={{ color: "rgba(240,240,240,0.55)" }}
+            >
+              Swedish entrepreneur and co-founder of{" "}
+              <a href="https://rankad.ai" target="_blank" rel="noopener nofollow" style={{ color: "rgba(240,240,240,0.85)", textDecoration: "underline" }}>Rankad.ai</a>
+              {" "}— an autonomous AI search optimization platform helping brands win inside ChatGPT, Gemini, and Perplexity.
+              {" "}Also founder of{" "}
+              <a href="https://lkinnovations.se" target="_blank" rel="noopener nofollow" style={{ color: "rgba(240,240,240,0.85)", textDecoration: "underline" }}>LK Innovations AB</a>,
+              {" "}a web agency with 50+ delivered projects and a 4.6 Trustpilot rating.
+              {" "}Selected Founder in Residence at The Residency, San Francisco.{" "}
+              Explore my{" "}
+              <Link href="/projects" style={{ color: "rgba(240,240,240,0.85)", textDecoration: "underline" }}>projects</Link>,{" "}
+              <Link href="/about" style={{ color: "rgba(240,240,240,0.85)", textDecoration: "underline" }}>background</Link>, and{" "}
+              <Link href="/articles" style={{ color: "rgba(240,240,240,0.85)", textDecoration: "underline" }}>certifications</Link>.
+            </p>
+
           </div>
 
         </Layout>

@@ -1,6 +1,5 @@
 // pages/_app.js
 
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import StatusBar from "@/components/StatusBar";
@@ -15,6 +14,7 @@ import dynamic from "next/dynamic";
 
 const SpotifyNowPlaying = dynamic(() => import("@/components/SpotifyNowPlaying"), { ssr: false });
 const VisitorCounter = dynamic(() => import("@/components/VisitorCounter"), { ssr: false });
+const SpeedInsights = dynamic(() => import("@vercel/speed-insights/next").then((m) => m.SpeedInsights), { ssr: false });
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" fill="none" preserveAspectRatio="xMidYMid meet">
+  <!-- S block -->
+  <rect x="2" y="2" width="52" height="116" rx="8" fill="currentColor"/>
+  <!-- L block -->
+  <rect x="64" y="2" width="52" height="116" rx="8" fill="currentColor"/>
+  <!-- A block -->
+  <rect x="126" y="2" width="52" height="116" rx="8" fill="currentColor"/>
+  <!-- Letters in white -->
+  <text x="28" y="80" font-family="'Arial Black','Arial',sans-serif" font-size="72" font-weight="900" text-anchor="middle" dominant-baseline="auto" fill="white">S</text>
+  <text x="90" y="80" font-family="'Arial Black','Arial',sans-serif" font-size="72" font-weight="900" text-anchor="middle" dominant-baseline="auto" fill="white">L</text>
+  <text x="152" y="80" font-family="'Arial Black','Arial',sans-serif" font-size="72" font-weight="900" text-anchor="middle" dominant-baseline="auto" fill="white">A</text>
+</svg>
