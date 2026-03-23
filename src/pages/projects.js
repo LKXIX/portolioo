@@ -34,7 +34,8 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
 
       <Link
         href={link}
-        target={"_blank"}
+        target="_blank"
+        rel="noopener nofollow"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
         <FramerImage
@@ -55,33 +56,33 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
         </span>
         <Link
           href={link}
-          target={"_blank"}
+          target="_blank"
+          rel="noopener nofollow"
           className="underline-offset-2 hover:underline"
         >
           <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
             {title}
           </h2>
         </Link>
-        <p className=" my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
+        <p className="my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
           {summary}
         </p>
         <div className="mt-2 flex items-center">
           <Link
             href={github}
-            target={"_blank"}
+            target="_blank"
+            rel="noopener nofollow"
             className="w-10"
-            aria-label="Crypto Screener Application github link"
+            aria-label={`${title} GitHub repository`}
           >
             <GithubIcon />
           </Link>
           <Link
             href={link}
-            target={"_blank"}
-            className="ml-4 rounded-lg
-             bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
-             sm:px-4 sm:text-base
-            "
-            aria-label="Crypto Screener Application"
+            target="_blank"
+            rel="noopener nofollow"
+            className="ml-4 rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
+            aria-label={`Visit ${title}`}
           >
             Visit Project
           </Link>
@@ -161,16 +162,79 @@ const Project = ({ title, type, img, link, github }) => {
   );
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.com" },
+    { "@type": "ListItem", position: 2, name: "Projects", item: "https://liamkarlsson.com/projects" },
+  ],
+};
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Projects by Liam Karlsson",
+  url: "https://liamkarlsson.com/projects",
+  description: "Projects and client work by Liam Karlsson: co-founder of Rankad.ai, founder of LK Innovations AB (50+ delivered websites and SEO projects for Swedish and international clients).",
+  dateModified: "2026-03-01",
+  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.com" },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What projects has Liam Karlsson built?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Liam Karlsson co-founded Rankad.ai, an autonomous AI Search Optimization platform selected into The Residency in San Francisco. He also founded LK Innovations AB, which has delivered 50+ websites and SEO projects for clients including Rankad.ai, Maison Satar, Sportoteket, Djurgruppen, Nordic Hockey Center, and many more Swedish businesses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Liam Karlsson build a website for my business?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Through LK Innovations AB, Liam Karlsson delivers custom websites and SEO for businesses. The agency has a 4.6 Trustpilot rating and has achieved up to +1100% traffic growth for clients. Contact liam@lkinnovations.se or business@liamkarlsson.com.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What tech stack does Liam Karlsson use?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Liam Karlsson uses React, Next.js, Node.js, Tailwind CSS, PHP, and MySQL. For AI projects like Rankad.ai he works with agentic AI infrastructure and LLM-based optimization systems.",
+      },
+    },
+  ],
+};
+
+export async function getStaticProps() {
+  return { props: {} };
+}
+
 export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects Page</title>
+        <title>Projects – Rankad.ai, LK Innovations & Client Work by Liam Karlsson</title>
         <meta
           name="description"
-          content="Discover the latest webapp projects created by Liam Karlsson, a developer with 
-        expertise in React.js and full-stack development. Browse software engineering articles and see the certificates that Liam has earned."
+          content="Projects by Liam Karlsson: co-founder of Rankad.ai (AI search optimization) and founder of LK Innovations AB — 50+ delivered websites and SEO projects for Swedish and international clients."
         />
+        <meta property="og:title" content="Projects – Rankad.ai, LK Innovations & Client Work by Liam Karlsson" />
+        <meta property="og:description" content="Co-founder of Rankad.ai. Founder of LK Innovations AB — 50+ client websites and SEO projects with up to +1100% traffic growth." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://liamkarlsson.com/projects" />
+        <meta property="og:image" content="https://liamkarlsson.com/images/profile/liam2.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://liamkarlsson.com/projects" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       </Head>
 
       <TransitionEffect />
@@ -183,94 +247,119 @@ export default function Projects() {
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-          <div className="col-span-12">
+
+            {/* Rankad.ai */}
+            <div className="col-span-12">
               <FeaturedProject
-                type="Web Application"
-                title="MK Designgolv Website"
-                summary="A web application for MK Designgolv AB, a Swedish company specializing in high-quality and uniquely designed flooring solutions. The application is built using Hostinger Website Builder, featuring a user-friendly interface, responsive design, and mobile compatibility. It is hosted on Hostinger and provides a seamless browsing experience for customers.
-For more details, visit: mkdesigngolv.com.
-"
+                type="AI-Powered SaaS — Co-founded"
+                title="Rankad.ai"
+                summary="Rankad.ai is an autonomous AI Search Optimization platform helping brands become the recommended answer inside ChatGPT, Gemini, and Perplexity on autopilot. Co-founded by Liam Karlsson in September 2025. Selected into The Residency in San Francisco in 2026 — one of 25 startups chosen from 3,500+ global applicants. Featured in Breakit as one of Sweden's startups to watch. Built using modern agentic AI infrastructure."
+                img={proj4}
+                link="https://rankad.ai"
+                github="#"
+              />
+            </div>
+
+            {/* LK Innovations */}
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Web Agency — Founded"
+                title="LK Innovations AB"
+                summary="LK Innovations AB is a Swedish web agency founded by Liam Karlsson in March 2024. The agency has delivered 50+ websites and SEO projects for clients across Sweden and internationally, achieving up to +1100% traffic growth and generating measurable revenue results. Holds a 4.6 rating on Trustpilot with verified client reviews. Services include custom web development, technical SEO, and digital marketing."
+                img={proj3}
+                link="https://lkinnovations.se"
+                github="#"
+              />
+            </div>
+
+            {/* MK Designgolv */}
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Client Website — LK Innovations"
+                title="MK Designgolv AB"
+                summary="Website for MK Designgolv AB, a Swedish company specialising in high-quality and uniquely designed flooring. Built with a user-friendly interface, responsive design, and mobile compatibility. Client review: 'Fick väldigt fint bemötande av Liam ändansen dag 1. Kanon service och väldigt duktig på att bygga hemsidor.' — MK Designgolv AB."
                 img={proj3}
                 link="https://mkdesigngolv.com"
                 github="#"
               />
             </div>
+
+            {/* Mâlm UF */}
             <div className="col-span-12">
               <FeaturedProject
-                type="Web Application"
-                title="Liam Karlsson's Portfolio Website"
-                summary="LiamKarlsson.com – My personal portfolio website designed to showcase my achievements, skills, and projects. It serves as a central hub for employers and clients to easily explore what I'm capable of. The site highlights my expertise in web development, design, and SEO, demonstrating my ability to create modern, responsive, and high-performing applications. The webpage is built with HTML, Tailwind CSS, Javascript, React and Next.js
-"
-                img={proj4}
-                link="https://liamkarlsson.com"
-                github="#"
-              />
-            </div>
-            <div className="col-span-12">
-              <FeaturedProject
-                type="Web Application"
-                title="Mâlm UF Web Application"
-                summary="A web application for Mâlm UF, a Swedish company that specializes in the production of unique and high-quality Clothes. The application is built using HTML, CSS, Javascript, Express.js and Node.js It has a user-friendly interface, a responsive design, and it is mobile-friendly. The application is hosted on Replit."
+                type="Web Application — CEO & Founder"
+                title="Mâlm UF"
+                summary="As CEO of Mâlm UF, Liam Karlsson led a student fashion company producing exclusive zip hoodies, t-shirts, and sweaters. The web application was built using HTML, CSS, JavaScript, Express.js, and Node.js with a user-friendly and mobile-responsive interface. Hosted on Replit."
                 img={proj1}
                 link="https://31214db6-963f-43d6-b0d5-c58dbc7fbae5-00-2fp48im1x2e0k.kirk.replit.dev/"
                 github="#"
               />
             </div>
-            <div className="col-span-12">
-              <FeaturedProject
-                type="E-Book"
-                title="Forex Trading Guide"
-                summary="Unlock the World of Forex Trading: A Comprehensive Guide
 
-                Embark on a journey through the intricacies of Forex trading with this comprehensive ebook. Starting with the foundational principles, delve into the complexities of market analysis, including both fundamental and technical approaches. Learn invaluable risk management strategies to safeguard your investments and discover the art of crafting a personalized trading strategy tailored to your goals.
-                
-                Navigate the landscape of brokerages with confidence and master the often-overlooked aspect of emotional discipline. Gain insights into the diverse participants shaping the market and equip yourself with continuous learning techniques to stay ahead in this dynamic field.
-                
-                Packed with expert tips and tricks, this ebook is your ultimate companion in the world of Forex trading. Connect with the creator and join a community of like-minded individuals on a journey towards financial success."
-                img={proj2}
-                link="#" /* <a href="https://31214db6-963f-43d6-b0d5-c58dbc7fbae5-00-2fp48im1x2e0k.kirk.replit.dev/" download>Ladda ner E-bok</a> */
-                github="#"
-              />
-            </div>
-            {/*
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website"
-                title="Fashion Studio Website"
-                img={proj3}
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
-              />
-            </div>
+            {/* LK Innovations client list */}
             <div className="col-span-12">
-              <FeaturedProject
-                type="Portfolio Website"
-                title="React Portfolio Website"
-                summary="A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
-                img={proj4}
-                link="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion"
-                github="https://github.com/codebucks27/react-portfolio-final"
-              />
+              <div className="w-full rounded-2xl border border-solid border-dark bg-light p-8 dark:border-light dark:bg-dark">
+                <h2 className="text-3xl font-bold mb-2 text-dark dark:text-light">LK Innovations — Selected Client Work</h2>
+                <p className="text-dark/75 dark:text-light/75 mb-8 text-sm">50+ projects delivered for Swedish and international businesses across e-commerce, services, AI, sport, and lifestyle.</p>
+                <ul className="grid grid-cols-2 gap-3 md:grid-cols-1 text-sm text-dark/75 dark:text-light/75">
+                  {[
+                    { name: "Rankad.ai", type: "AI-lösningar" },
+                    { name: "Maison Satar", type: "Mode & Livsstil" },
+                    { name: "Adore Performance", type: "Sport & Coaching" },
+                    { name: "BrandVault", type: "Mode & Livsstil" },
+                    { name: "Sportoteket AB", type: "Sport & E-handel" },
+                    { name: "Forcy AB", type: "Webbutveckling" },
+                    { name: "OptiflowAI", type: "AI-lösningar" },
+                    { name: "X-World", type: "Digital plattform" },
+                    { name: "Djurgruppen", type: "E-handel" },
+                    { name: "Nordic Hockey Center", type: "Sport & Recreation" },
+                    { name: "SagaBoulevard", type: "Webbutveckling" },
+                    { name: "Wrapped Up Kristianstad", type: "E-handel" },
+                    { name: "MAA Bygg AB", type: "Tjänsteföretag" },
+                    { name: "Tim Hit och Dit", type: "Tjänsteföretag" },
+                    { name: "Bilvårdsshoppen", type: "Bil & E-handel" },
+                    { name: "Nordic Cookware", type: "Kök & E-handel" },
+                    { name: "Nordic Glow Store", type: "E-handel" },
+                    { name: "Ninnis Flora", type: "Blommor & E-handel" },
+                    { name: "Jarls Service AB", type: "Tjänsteföretag" },
+                    { name: "Mammahjälpen", type: "Ideell organisation" },
+                    { name: "VisionSales", type: "Webbutveckling" },
+                    { name: "MK Design Golv", type: "Webbutveckling" },
+                    { name: "Fragrance Swap", type: "E-handel" },
+                    { name: "Requritas", type: "Konsulttjänster" },
+                    { name: "Scaper Team", type: "Utomhusmiljö" },
+                    { name: "JuridikAI", type: "AI-lösningar" },
+                  ].map(({ name, type }) => (
+                    <li key={name} className="flex justify-between border-b border-dark/10 dark:border-light/10 py-2">
+                      <span className="font-medium text-dark dark:text-light">{name}</span>
+                      <span className="text-dark/50 dark:text-light/50">{type}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website Template"
-                img={proj5}
-                title="Agency Website Template"
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Blog Website"
-                img={proj6}
-                title="DevDreaming"
-                link="https://devdreaming.com"
-                github="https://github.com/codebucks27"
-              />
-            </div> */}
+
           </div>
+
+          {/* FAQ Section */}
+          <section className="mt-32 w-full" aria-label="Frequently asked questions about Liam Karlsson's projects">
+            <h2 className="font-bold text-4xl w-full text-center mb-16">Frequently Asked Questions</h2>
+            <dl className="space-y-8 max-w-3xl mx-auto">
+              <div>
+                <dt className="font-semibold text-xl text-dark dark:text-light">What projects has Liam Karlsson built?</dt>
+                <dd className="mt-2 text-dark/75 dark:text-light/75">Liam Karlsson co-founded Rankad.ai (autonomous AI search optimization, selected into The Residency San Francisco) and founded LK Innovations AB, which has delivered 50+ websites and SEO projects for clients including Sportoteket, Djurgruppen, Nordic Hockey Center, Maison Satar, and JuridikAI.</dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-xl text-dark dark:text-light">Can Liam Karlsson build a website for my business?</dt>
+                <dd className="mt-2 text-dark/75 dark:text-light/75">Yes. Through LK Innovations AB, Liam delivers custom websites and SEO with measurable results. The agency has a 4.6 Trustpilot rating. Contact <a href="mailto:liam@lkinnovations.se" className="underline">liam@lkinnovations.se</a> or visit <Link href="/" className="underline underline-offset-2">liamkarlsson.com</Link> to get in touch.</dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-xl text-dark dark:text-light">What tech stack does Liam Karlsson use?</dt>
+                <dd className="mt-2 text-dark/75 dark:text-light/75">React, Next.js, Node.js, Tailwind CSS, PHP, and MySQL for web projects. For Rankad.ai, agentic AI infrastructure and LLM-based optimization systems. See the full skills breakdown on the <Link href="/about" className="underline underline-offset-2">about page</Link>.</dd>
+              </div>
+            </dl>
+          </section>
+
         </Layout>
       </main>
     </>

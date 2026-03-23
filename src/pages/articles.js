@@ -53,7 +53,8 @@ const MovingImg = ({ title, img, link }) => {
     <>
       <Link
         href={link}
-        target={"_blank"}
+        target="_blank"
+        rel="noopener nofollow"
         className="relative"
         onMouseMove={handleMouse}
         onMouseLeave={handleMouseLeave}
@@ -111,7 +112,8 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
       />
       <Link
         href={link}
-        target={"_blank"}
+        target="_blank"
+        rel="noopener nofollow"
         className="inline-block rounded-lg overflow-hidden w-full"
       >
         <FramerImage
@@ -125,7 +127,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         />
       </Link>
 
-      <Link href={link} target={"_blank"}>
+      <Link href={link} target="_blank" rel="noopener nofollow">
         <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline xs:text-lg">
           {title}
         </h2>
@@ -138,13 +140,76 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
   );
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.com" },
+    { "@type": "ListItem", position: 2, name: "Achievements & Certificates", item: "https://liamkarlsson.com/articles" },
+  ],
+};
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Achievements & Certificates – Liam Karlsson",
+  url: "https://liamkarlsson.com/articles",
+  description: "Professional certificates earned by Liam Karlsson in cybersecurity, AI, web development, and networking — including Google Cybersecurity Specialization, Cisco CCNAv7, and Microsoft Career Essentials in Cybersecurity.",
+  dateModified: "2025-06-01",
+  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.com" },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What certifications does Liam Karlsson have in cybersecurity?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Liam Karlsson holds the Google Cybersecurity Specialization (Coursera), Microsoft Career Essentials in Cybersecurity (LinkedIn Learning), Cisco Introduction to Cybersecurity, Cisco CCNAv7 (Introduction to Networks, Switching & Routing, Enterprise Networking Security & Automation), and the Cybersecurity Awareness certifications from LinkedIn Learning.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Liam Karlsson have AI and machine learning certifications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Liam Karlsson holds Google AI Essentials (Coursera, 2024) and has completed online coursework in artificial intelligence including Harvard's CS50 series.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What networking certifications does Liam Karlsson hold?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Liam Karlsson has completed all three modules of the Cisco CCNAv7 curriculum: Introduction to Networks, Switching Routing and Wireless Essentials, and Enterprise Networking Security and Automation.",
+      },
+    },
+  ],
+};
+
+export async function getStaticProps() {
+  return { props: {} };
+}
+
 export default function Articles() {
   return (
     <>
       <Head>
-        <title>Achievements Page</title>
-        <meta name="description" content="
-Explore Liam Karlsson's collection of certificates, showcasing his expertise in various areas of digital design and development. Gain valuable insights and stay up-to-date with SEO tips for building a developer portfolio, ensuring maximum visibility and impact in the competitive tech industry. Whether you're a seasoned professional or just starting your journey, Liam's portfolio offers inspiration and practical advice for advancing your career and achieving success in the digital landscape." />
+        <title>Achievements & Certificates – Liam Karlsson</title>
+        <meta name="description" content="Liam Karlsson's professional certificates: Google Cybersecurity Specialization, Cisco CCNAv7, Google AI Essentials, Microsoft Cybersecurity, and 15+ more in security, networking, and web development." />
+        <meta property="og:title" content="Achievements & Certificates – Liam Karlsson" />
+        <meta property="og:description" content="20+ professional certificates earned by Liam Karlsson in cybersecurity, AI, web development, and networking." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://liamkarlsson.com/articles" />
+        <meta property="og:image" content="https://liamkarlsson.com/images/profile/liam2.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://liamkarlsson.com/articles" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       </Head>
       <TransitionEffect />
       <main
@@ -319,6 +384,33 @@ Explore Liam Karlsson's collection of certificates, showcasing his expertise in 
           />
           
           </ul>
+
+          {/* FAQ Section */}
+          <section className="mt-32 w-full" aria-label="Frequently asked questions about Liam Karlsson's certifications">
+            <h2 className="font-bold text-4xl w-full text-center mb-16">Frequently Asked Questions</h2>
+            <dl className="space-y-8 max-w-3xl mx-auto">
+              <div>
+                <dt className="font-semibold text-xl text-dark dark:text-light">What cybersecurity certifications does Liam Karlsson have?</dt>
+                <dd className="mt-2 text-dark/75 dark:text-light/75">Google Cybersecurity Specialization, Microsoft Career Essentials in Cybersecurity, Cisco Introduction to Cybersecurity, and all three Cisco CCNAv7 modules. See all certificates listed above.</dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-xl text-dark dark:text-light">Does Liam Karlsson have AI certifications?</dt>
+                <dd className="mt-2 text-dark/75 dark:text-light/75">Yes — Google AI Essentials (Coursera, 2024) and ongoing coursework including Harvard CS50 series. Learn more about Liam&apos;s technical background on the <Link href="/about" className="underline underline-offset-2">about page</Link>.</dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-xl text-dark dark:text-light">What networking certifications does Liam Karlsson hold?</dt>
+                <dd className="mt-2 text-dark/75 dark:text-light/75">All three Cisco CCNAv7 modules: Introduction to Networks, Switching Routing and Wireless Essentials, and Enterprise Networking Security and Automation.</dd>
+              </div>
+            </dl>
+          </section>
+
+          {/* Internal navigation */}
+          <nav className="mt-16 flex flex-wrap gap-4 justify-center" aria-label="Explore more">
+            <Link href="/" className="inline-block rounded-lg border-2 border-solid bg-dark px-4 py-2 font-semibold text-light hover:border-dark hover:bg-transparent hover:text-dark dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light">Home</Link>
+            <Link href="/about" className="inline-block rounded-lg border-2 border-solid bg-dark px-4 py-2 font-semibold text-light hover:border-dark hover:bg-transparent hover:text-dark dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light">About Liam</Link>
+            <Link href="/projects" className="inline-block rounded-lg border-2 border-solid bg-dark px-4 py-2 font-semibold text-light hover:border-dark hover:bg-transparent hover:text-dark dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light">Projects</Link>
+          </nav>
+
         </Layout>
       </main>
     </>

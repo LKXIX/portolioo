@@ -1,0 +1,36 @@
+# Liam Karlsson
+
+Liam Karlsson is a Swedish entrepreneur born in 2005, co-founder and CEO of Rankad.ai and founder of LK Innovations AB, based in Laholm, Sweden.
+This site is his personal portfolio for employers, investors, clients, and collaborators who want to understand who he is, what he has built, and how to reach him.
+
+## Key concepts
+- Liam Karlsson: Swedish entrepreneur born 2005. Co-founder of Rankad.ai. Founder of LK Innovations AB. Selected Founder in Residence at The Residency, San Francisco 2026.
+- Rankad.ai: An autonomous AI Search Optimization platform co-founded by Liam Karlsson. Helps brands become the recommended answer inside ChatGPT, Gemini, and Perplexity on autopilot. Selected into The Residency, San Francisco in 2026 out of 3,500+ global applicants. Featured in Breakit.
+- LK Innovations AB: A Swedish web agency founded by Liam Karlsson in March 2024. Has delivered 50+ websites and SEO projects for clients. Up to +1100% traffic growth achieved. 4.6 Trustpilot rating. Based in Laholm, Sweden. Org number: 559537-5758.
+- The Residency: An elite San Francisco founder program. Liam was selected in February 2026 as one of 25 founders from 3,500+ global applicants, building Rankad.ai during the program.
+- Web Development: Liam builds websites with React, Next.js, Node.js, Tailwind CSS, PHP, and MySQL.
+- IT Security: Liam is currently enrolled in the IT Security Specialist programme at Teknikhögskolan (2025–2027). Former Account Manager & IT Support Specialist at Axami Systems AB.
+- Futures Trading: Liam managed $80K+ in funded trading capital with Topstep, achieving ~60% win rate in NASDAQ and S&P 500 futures.
+- AEO: Answer Engine Optimization — the practice of optimizing content and technical signals so that AI assistants like ChatGPT, Gemini, and Perplexity recommend a brand in their answers.
+
+## Primary use cases
+- Understanding who Liam Karlsson is and what he has built
+- Evaluating Liam for investment, partnership, or startup collaboration related to Rankad.ai
+- Hiring Liam or LK Innovations AB for web development, SEO, or digital marketing
+- Contacting Liam for speaking engagements, media appearances, or consulting
+- Reviewing Liam's technical skills, education, and certifications
+
+## Important pages
+- Home: https://liamkarlsson.com
+- About: https://liamkarlsson.com/about
+- Projects: https://liamkarlsson.com/projects
+- Achievements & Certificates: https://liamkarlsson.com/articles
+- Press & Media: https://liamkarlsson.com/media
+
+## External profiles
+- LinkedIn: https://www.linkedin.com/in/liamkarlsson/
+- Rankad.ai: https://rankad.ai
+- LK Innovations: https://lkinnovations.se
+
+## Do not crawl
+- /api/
