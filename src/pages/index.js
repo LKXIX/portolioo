@@ -8,6 +8,7 @@ import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import { LogoCloud } from "@/components/ui/logo-cloud";
 
 const AIChatHero = dynamic(
   () => import("@/components/ui/v0-ai-chat").then((m) => m.AIChatHero),
@@ -16,42 +17,34 @@ const AIChatHero = dynamic(
 
 const pressLogos = [
   {
-    name: "Hallandsposten",
+    alt: "Hallandsposten",
     href: "https://www.hallandsposten.se/hallands-affarer/liam-karlsson-fran-veinge-jagar-drommen-i-silicon-valley.f089823e-ee42-4222-90a2-0dc97333bde3",
-    img: "/images/press/hallandsposten.png",
-    height: 40,
-    maxWidth: "180px",
+    src: "/images/press/hallandsposten.png",
   },
   {
-    name: "Breakit",
+    alt: "Breakit",
     href: "https://www.breakit.se/artikel/45777/ai-mode-och-lovable-for-hardvara-har-ar-de-senaste-bolagen-i-breakits-varld",
-    img: "/images/press/breakit.png",
-    height: 34,
-    maxWidth: "130px",
+    src: "/images/press/breakit.png",
   },
   {
-    name: "Skaraborgs Allehanda",
+    alt: "Skaraborgs Allehanda",
     href: "https://www.sla.se/2026/03/12/tibrosonen-i-silicon-valley-vaga-dromma-oerhort-stort-6f864/",
-    img: "/images/press/sla.svg",
-    height: 56,
-    width: "93px",
-    maxWidth: "93px",
+    src: "/images/press/sla.png",
   },
   {
-    name: "Sveriges Radio",
+    alt: "Sveriges Radio",
     href: "https://sverigesradio.se",
-    img: "/images/press/sveriges-radio.svg",
-    height: 56,
-    width: "160px",
-    maxWidth: "160px",
+    src: "/images/press/sverigesradio.png",
   },
   {
-    name: "Yuncture",
+    alt: "Laholms Tidning",
+    href: "https://www.laholmstidning.se",
+    src: "/images/press/laholmstidning.png",
+  },
+  {
+    alt: "Yuncture",
     href: "https://www.yuncture.com/news/20-och-23-aringarna-bakom-rankad-antagna-till-silicon-valleys-the-residency",
-    img: "/images/press/yuncture.svg",
-    height: 34,
-    width: "214px",
-    maxWidth: "214px",
+    src: "/images/press/yuncture.svg",
   },
 ];
 
@@ -210,67 +203,7 @@ export default function Home() {
 
           </div>
 
-          {/* Press bar — guaranteed dark background */}
-          <div
-            className="mt-20 w-full rounded-2xl px-8 py-10"
-            style={{ backgroundColor: "#0a0a0a" }}
-          >
-            <p
-              className="text-xs font-semibold uppercase tracking-widest mb-8 text-center"
-              style={{ color: "rgba(240,240,240,0.35)" }}
-            >
-              As seen in
-            </p>
-
-            {/* Logos — forced white with inline filter */}
-            <div className="flex flex-wrap gap-10 justify-center items-center mb-10">
-              {pressLogos.map((p) => (
-                <motion.a
-                  key={p.name}
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener nofollow"
-                  whileHover={{ y: -3 }}
-                  aria-label={p.name}
-                  style={{ opacity: 0.45, transition: "opacity 0.25s" }}
-                  onMouseEnter={e => e.currentTarget.style.opacity = "1"}
-                  onMouseLeave={e => e.currentTarget.style.opacity = "0.45"}
-                >
-                  <img
-                    src={p.img}
-                    alt={p.name}
-                    style={{
-                      height: p.height,
-                      width: p.width || "auto",
-                      maxWidth: p.maxWidth || "180px",
-                      objectFit: "contain",
-                      filter: "brightness(0) invert(1)",
-                      display: "block",
-                    }}
-                  />
-                </motion.a>
-              ))}
-            </div>
-
-            {/* Bio below logos */}
-            <p
-              className="text-center text-sm leading-relaxed max-w-2xl mx-auto"
-              style={{ color: "rgba(240,240,240,0.55)" }}
-            >
-              Swedish entrepreneur and co-founder of{" "}
-              <a href="https://rankad.ai" target="_blank" rel="noopener nofollow" style={{ color: "rgba(240,240,240,0.85)", textDecoration: "underline" }}>Rankad.ai</a>
-              {" "}— an autonomous AI search optimization platform helping brands win inside ChatGPT, Gemini, and Perplexity.
-              {" "}Also founder of{" "}
-              <a href="https://lkinnovations.se" target="_blank" rel="noopener nofollow" style={{ color: "rgba(240,240,240,0.85)", textDecoration: "underline" }}>LK Innovations AB</a>,
-              {" "}a web agency with 50+ delivered projects and a 4.6 Trustpilot rating.
-              {" "}Selected Founder in Residence at The Residency, San Francisco.{" "}
-              Explore my{" "}
-              <Link href="/projects" style={{ color: "rgba(240,240,240,0.85)", textDecoration: "underline" }}>projects</Link>,{" "}
-              <Link href="/about" style={{ color: "rgba(240,240,240,0.85)", textDecoration: "underline" }}>background</Link>, and{" "}
-              <Link href="/articles" style={{ color: "rgba(240,240,240,0.85)", textDecoration: "underline" }}>certifications</Link>.
-            </p>
-
-          </div>
+          <LogoCloud logos={pressLogos} />
 
         </Layout>
 

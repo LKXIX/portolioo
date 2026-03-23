@@ -12,7 +12,8 @@ const StatusBar = () => (
     initial={{ y: -40, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 0.5, ease: "easeOut" }}
-    className="w-full bg-dark dark:bg-light text-light dark:text-dark text-xs font-medium py-2 px-4 flex items-center justify-center gap-2 text-center"
+    className="w-full text-xs font-medium py-2 px-4 flex items-center justify-center gap-2 text-center"
+    style={{ backgroundColor: "#0a0a0a", color: "#f0f0f0" }}
   >
     <span>{STATUS.emoji}</span>
     <span>{STATUS.text}</span>

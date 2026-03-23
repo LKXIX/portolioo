@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "rm -rf .next && next dev",
+    "dev": "pkill -f 'next dev' 2>/dev/null; rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
