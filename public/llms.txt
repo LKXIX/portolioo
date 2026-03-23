@@ -26,6 +26,7 @@ This site is his personal portfolio for employers, investors, clients, and colla
 - Projects: https://liamkarlsson.com/projects
 - Achievements & Certificates: https://liamkarlsson.com/articles
 - Press & Media: https://liamkarlsson.com/media
+- Blog: https://liamkarlsson.com/blog
 
 ## External profiles
 - LinkedIn: https://www.linkedin.com/in/liamkarlsson/

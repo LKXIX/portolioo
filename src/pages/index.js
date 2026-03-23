@@ -6,6 +6,21 @@ import Image from "next/image";
 import Link from "next/link";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import TransitionEffect from "@/components/TransitionEffect";
+import { motion } from "framer-motion";
+
+const pressLogos = [
+  { name: "Hallandsposten", href: "https://www.hallandsposten.se/hallands-affarer/liam-karlsson-fran-veinge-jagar-drommen-i-silicon-valley.f089823e-ee42-4222-90a2-0dc97333bde3" },
+  { name: "Breakit", href: "https://www.breakit.se/artikel/45777/ai-mode-och-lovable-for-hardvara-har-ar-de-senaste-bolagen-i-breakits-varld" },
+  { name: "Skaraborgs Allehanda", href: "https://www.sla.se/2026/03/12/tibrosonen-i-silicon-valley-vaga-dromma-oerhort-stort-6f864/" },
+  { name: "Yuncture", href: "https://www.yuncture.com/news/20-och-23-aringarna-bakom-rankad-antagna-till-silicon-valleys-the-residency" },
+];
+
+const stats = [
+  { value: "50+", label: "Client Projects" },
+  { value: "#25", label: "The Residency SF" },
+  { value: "3,500+", label: "Global Applicants" },
+  { value: "4.6★", label: "Trustpilot" },
+];
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -68,7 +83,7 @@ const personSchema = {
   sameAs: [
     "https://www.linkedin.com/in/liamkarlsson/",
     "https://rankad.ai",
-    "https://lkinnovations.se"
+    "https://lkinnovations.se",
   ],
   knowsAbout: ["AI Search Optimization", "AEO", "SEO", "Web Development", "React", "Next.js", "Node.js", "Cyber Security", "Futures Trading"],
   founder: [
@@ -125,6 +140,18 @@ export default function Home() {
                 <Link href="/articles" className="underline underline-offset-2">certifications</Link>.
               </p>
 
+              {/* Stats row */}
+              <div className="grid grid-cols-4 gap-4 my-6 w-full sm:grid-cols-2">
+                {stats.map((stat) => (
+                  <div key={stat.label} className="flex flex-col items-start">
+                    <span className="text-2xl font-bold text-primary dark:text-primaryDark md:text-xl">
+                      {stat.value}
+                    </span>
+                    <span className="text-xs text-dark/60 dark:text-light/60 font-medium">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
                   href="/Liam Karlsson CV.pdf"
@@ -149,6 +176,28 @@ export default function Home() {
 
             </div>
           </div>
+
+          {/* Press / Social Proof bar */}
+          <div className="mt-16 w-full border-t border-solid border-dark/10 dark:border-light/10 pt-8">
+            <p className="text-xs font-semibold uppercase tracking-widest text-dark/40 dark:text-light/40 mb-4 text-center">
+              As seen in
+            </p>
+            <div className="flex flex-wrap gap-6 justify-center items-center">
+              {pressLogos.map((p) => (
+                <motion.a
+                  key={p.name}
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener nofollow"
+                  whileHover={{ y: -2 }}
+                  className="text-sm font-semibold text-dark/50 dark:text-light/50 hover:text-primary dark:hover:text-primaryDark transition-colors duration-200"
+                >
+                  {p.name}
+                </motion.a>
+              ))}
+            </div>
+          </div>
+
         </Layout>
 
         <HireMe />

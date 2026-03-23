@@ -1,63 +1,51 @@
 import { motion } from "framer-motion";
-import React, { useRef } from "react";
 
+const skills = [
+  { name: "React", category: "Frontend" },
+  { name: "Next.js", category: "Frontend" },
+  { name: "Tailwind CSS", category: "Frontend" },
+  { name: "JavaScript", category: "Frontend" },
+  { name: "TypeScript", category: "Frontend" },
+  { name: "HTML / CSS", category: "Frontend" },
+  { name: "Node.js", category: "Backend" },
+  { name: "PHP", category: "Backend" },
+  { name: "MySQL", category: "Backend" },
+  { name: "REST APIs", category: "Backend" },
+  { name: "SEO", category: "Marketing" },
+  { name: "AEO", category: "Marketing" },
+  { name: "IT Security", category: "Security" },
+  { name: "Git / GitHub", category: "Tools" },
+  { name: "Vercel", category: "Tools" },
+  { name: "Sanity CMS", category: "Tools" },
+];
 
-const Skill = ({ name, x, y }) => {
-  const ref = useRef(null);
-  return (
-    <motion.div
-      ref={ref}
-      whileHover={{scale:1.05}}
-      initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y, transition: {duration: 1.5} }}
-      viewport={{ once: true }}
-      className="cursor-pointer w-max origin-center absolute 
-       font-semibold bg-dark text-light py-3 px-6 rounded-full dark:bg-light dark:text-dark
-       lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3  xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold
-       "
-    >
-      {name}
-    </motion.div>
-  );
-};
+const SkillTag = ({ name, index }) => (
+  <motion.span
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.4, delay: index * 0.04 }}
+    viewport={{ once: true }}
+    whileHover={{ scale: 1.05 }}
+    className="inline-flex items-center px-4 py-2 rounded-lg border border-solid border-dark/20 dark:border-light/20
+      bg-light dark:bg-dark text-dark dark:text-light font-medium text-sm cursor-default
+      hover:border-primary dark:hover:border-primaryDark hover:text-primary dark:hover:text-primaryDark
+      transition-colors duration-200"
+  >
+    {name}
+  </motion.span>
+);
 
-const Skills = () => {
-  const ref = useRef(null);
-  return (
-<>
-      <h2 className="font-bold mb-4 text-8xl mt-32 w-full text-center md:text-6xl md:mt-32">
-        Skills
-      </h2> 
-    <div
-      ref={ref}
-      className="w-full h-[100vh] relative bg-circularLight dark:bg-circularDark  flex items-center justify-center 
-      mb-32 md:mb-32 rounded-full
-      lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd 
-      sm:bg-circularLightSm sm:dark:bg-circularDarkSm lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] 
-      "
-    >
-   
-        <motion.div whileHover={{scale:1.05}} className="cursor-pointer flex rounded-full font-semibold bg-dark text-light p-8 shadow-dark
-        dark:bg-light dark:text-dark lg:p-6 md:p-4 xs:text-xs xs:p-2
-        ">
-        Web
-      </motion.div>
-
-        <Skill name="HTML" x="-20vw" y="2vw" />
-
-          <Skill name="CSS" x="-5vw" y="-10vw" />
-          <Skill name="JavaScript" x="20vw" y="6vw" />
-          <Skill name="ReactJS" x="0vw" y="12vw" />
-          <Skill name="NextJS" x="-20vw" y="-15vw" />
-          <Skill name="NodeJS" x="15vw" y="-12vw" />
-          <Skill name="Github" x="-35vw" y="-5vw" />
-          <Skill name="Web Design" x="32vw" y="-5vw" />
-          <Skill name="PHP" x="0vw" y="-20vw" />
-          <Skill name="MySQL" x="-25vw" y="18vw" />
-          <Skill name="Tawilwind CSS" x="28vw" y="18vw" />
-          <Skill name="ExpressJS" x="0vw" y="22.5vw" />
-    </div></>
-  );
-};
+const Skills = () => (
+  <>
+    <h2 className="font-bold mb-8 text-8xl mt-32 w-full text-center md:text-6xl md:mt-24 xs:text-4xl">
+      Skills
+    </h2>
+    <div className="flex flex-wrap gap-3 justify-center max-w-3xl mx-auto mb-32 md:mb-24">
+      {skills.map((skill, i) => (
+        <SkillTag key={skill.name} name={skill.name} index={i} />
+      ))}
+    </div>
+  </>
+);
 
 export default Skills;

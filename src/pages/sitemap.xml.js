@@ -34,6 +34,12 @@ export async function getServerSideProps({ res }) {
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://liamkarlsson.com/blog</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>`;
 
   res.write(sitemap);

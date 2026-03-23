@@ -1,10 +1,6 @@
 import React, { useRef } from "react";
-import {
-  motion,
-  useScroll,
-} from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
-
 
 const Details = ({ position, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
@@ -24,7 +20,8 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
           <a
             className="capitalize text-secondary dark:text-secondary"
             href={companyLink}
-            target={"_blank"}
+            target="_blank"
+            rel="noopener nofollow"
           >
             @{company}
           </a>
@@ -32,165 +29,184 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <span className="capitalize text-dark/75 font-medium dark:text-light/50 xs:text-sm">
           {time} | {address}
         </span>
-        <p className="font-medium w-full md:text-sm"> {work}</p>
+        <p className="font-medium w-full md:text-sm whitespace-pre-line">{work}</p>
       </motion.div>
     </li>
   );
 };
 
 const Experience = () => {
-
   const ref = useRef(null);
-
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center start"],
   });
 
   return (
+    <div className="my-32">
+      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+        Experience
+      </h2>
 
-      <div className="my-32">
-        <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-          Experience
-        </h2>
+      <div ref={ref} className="relative w-[75%] mx-auto lg:w-[90%] md:w-full">
+        <motion.div
+          className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-dark origin-top dark:bg-secondary dark:shadow-3xl"
+          style={{ scaleY: scrollYProgress }}
+        />
+        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
 
-        <div ref={ref} className="relative w-[75%] mx-auto lg:w-[90%] md:w-full">
-          <motion.div
-            className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-dark 
-            origin-top  dark:bg-secondary dark:shadow-3xl"
-            style={{ scaleY: scrollYProgress }}
+          <Details
+            position="Co-founder & CEO"
+            company="Rankad.ai"
+            companyLink="https://rankad.ai"
+            time="Sep 2025–Present"
+            address="Gothenburg, Sweden · Hybrid"
+            work="Rankad.ai turns AI search into a revenue channel. Our autonomous agents track, optimize, and grow your brand across ChatGPT, Gemini, and Perplexity on autopilot.
+
+Selected into The Residency, San Francisco in 2026 — 1 of 25 founders from 3,500+ global applicants. Featured in Breakit, Hallandsposten, Skaraborgs Allehanda, and Yuncture."
           />
-          <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-            
-          <Details
-              position="Cyber Security Technican & IT-Support"
-              company="Axami Systems AB"
-              companyLink="https://axami.se"
-              time="Dec 2024-Present"
-              address="Halmstad, Sweden."
-              work="As a Security Technician and IT Support Specialist at Axami Systems, I ensure a secure and reliable IT infrastructure by monitoring maintenance systems, overseeing operations, and resolving technical issues. My efforts have reduced security incidents by 30% and improved system uptime to 99.8%, creating a more stable environment for both the company and our clients.
-
-I provide technical support to over 3000 users, resolving majority of issues on the first attempt. By optimizing processes, I’ve cut downtime by 10%, saving valuable time and resources. Additionally, I drive sales, training, and product demonstrations, helping clients increase operational efficiency by up to 25%.
-
-With a strong blend of technical expertise and problem-solving skills, I ensure high system performance while driving measurable business growth."
-            /> 
 
           <Details
-              position="Freelancing Web developer & Webdesigner"
-              company="Liam Karlsson"
-              companyLink="https://liamkarlsson.com"
-              time="Mar 2024-Present"
-              address="Halmstad, Sweden."
-              work="I offer tailored web solutions that combine creative design with technical expertise to create user-friendly and efficient websites. By focusing on both visual impact and functionality, I ensure that each project reflects your brand and engages your visitors. With a strong emphasis on strategic SEO, I also help optimize websites for search engines, increasing visibility and driving organic traffic.
+            position="Founder, Web Developer & Designer"
+            company="LK Innovations AB"
+            companyLink="https://lkinnovations.se"
+            time="Mar 2024–Present"
+            address="Halland, Sweden · Hybrid"
+            work="LK Innovations AB helps businesses grow online through data-driven web development and SEO.
 
-Explore my work at liamkarlsson.com."
-            /> 
-
-          <Details
-              position="Freelancing Fact Checker & Copy writing"
-              company="Outlier AI"
-              companyLink="https://outlier.ai/"
-              time="Nov 2024-Feb 2025"
-              address="Oakland, America."
-              work="As a freelance Swedish writer at Outlier.ai, I contribute to improving generative AI models by providing human feedback. My role involves reviewing and ranking AI-generated texts in Swedish, writing short stories, and verifying the factual accuracy of AI-produced content. I help ensure that AI systems maintain high quality and performance.
-
-This remote position offers the flexibility to work whenever and wherever it suits me while contributing to the advancement of cutting-edge AI technology.
-With a strong results-driven mindset and a passion for relationship-building, I strive to be a trusted partner for clients and a key contributor to the company’s growth and success."
-            /> 
-          <Details
-              position="Senior Sales Associate"
-              company="Key Solutions"
-              companyLink="https://www.keysolutions.se/?gad_source=1&gclid=CjwKCAiA5Ka9BhB5EiwA1ZVtvDec_k5AxNKHIMpYIfegbnUAlsFyFj0L_Pm67xZwfuoXO-yQHdeswRoCEGAQAvD_BwE"
-              time="Sept 2024-Present"
-              address="Gothenburg, Sweden."
-              work="As a Senior Sales Associate, I have a strategic responsibility to develop and drive sales by building long-term customer relationships and identifying new business opportunities. My role involves leading client meetings, conducting cold outreach, performing in-depth needs analyses, and delivering tailored solutions that create added value. I work closely with the team to optimize the sales process and ensure high customer satisfaction while also contributing to the team’s growth through mentorship and sharing insights from my experience.
-With a strong results-driven mindset and a passion for relationship-building, I strive to be a trusted partner for clients and a key contributor to the company’s growth and success."
-            /> 
+• 50+ clients served globally
+• Up to +1100% traffic growth achieved
+• 4.6 Trustpilot rating
+• Services: custom websites, technical development, SEO strategies, ongoing data-driven optimization"
+          />
 
           <Details
-              position="Junior Sales Associate"
-              company="Key Solutions"
-              companyLink="https://www.instagram.com/keysolutionsse/"
-              time="Sept 2024-Present"
-              address="Gothenburg, Sweden."
-              work="As a Junior Sales Associate, I focus on engaging customers and driving sales through effective communication and strategic relationship-building. My role involves identifying and connecting with potential clients, nurturing existing relationships, and ensuring a seamless sales process. I am passionate about understanding each customer's unique needs and offering tailored solutions that provide real value. With a focus on continuous development and learning, I strive to deliver excellent service and contribute to the company's success through strategic negotiations and reliable product knowledge."
-            /> 
+            position="Account Manager & IT Support Specialist"
+            company="Axami Systems AB"
+            companyLink="https://axami.se"
+            time="Dec 2024–Aug 2025"
+            address="Halmstad, Sweden · On-site"
+            work="• Youngest member of the team
+• 100+ cold calls per day, booking meetings with qualified prospects
+• Held demos and presentations that converted leads to paying customers
+• Managed 50+ active client relationships and ongoing support cases
+• Monitored and maintained IT systems for high availability and stable operations
+• Identified and resolved critical vulnerabilities for improved security
+• Handled 50+ support tickets per month, both internal and external
+• Built, debugged and optimized websites and technical solutions for performance and security
+• Reduced incidents and improved system reliability through proactive monitoring
+• Acted as a bridge between technical delivery and business outcomes"
+          />
 
           <Details
-              position="Sales Associate"
-              company="Key Solutions"
-              companyLink="https://www.instagram.com/keysolutionsse/"
-              time="Sept 2024-Present"
-              address="Gothenburg, Sweden."
-              work="Traveling Salesperson | Direct Sales | Customer Relationship Building
+            position="Futures Trader"
+            company="Topstep"
+            companyLink="https://topstep.com"
+            time="May 2023–Aug 2025"
+            address="Remote"
+            work="• Managed $80K+ in funded trading capital (Topstep, One of One Funding)
+• Achieved ~60% win rate with 1:2–1:3 risk/reward
+• Specialized in futures trading (NASDAQ, S&P 500)
+• Passed multiple funding evaluations and traded live capital
+• Developed and executed rule-based strategies with strict risk management
+• Analyzed price action, liquidity and macro for high-probability setups
+• Mentored beginners and shared structured trading strategies"
+          />
 
-As a traveling salesperson, I specialize in selling products and services directly to end customers. My work involves regular travel to meet both potential and existing clients, where I focus on building strong, long-term relationships and ensuring successful deals. I am passionate about understanding each customer's unique needs and offering solutions that create real value. With my ability to communicate effectively, negotiate strategically, and provide reliable product knowledge, I help customers make informed decisions while contributing to the growth of the company."
-            /> 
+          <Details
+            position="AI Copywriter & Fact Checker"
+            company="Outlier"
+            companyLink="https://outlier.ai"
+            time="Nov 2024–Feb 2025"
+            address="Oakland, USA · Remote"
+            work="• Worked with leading AI labs (incl. Meta) on model training and evaluation
+• Provided human feedback to improve generative AI model performance in Swedish
+• Evaluated, ranked and optimized AI-generated content by quality and relevance
+• Verified factual accuracy and reduced hallucinations in model responses
+• Improved AI language understanding, nuance and contextual interpretation
+• Wrote structured prompts and content to guide model behavior
+• Specialized in Swedish language tasks, localization and high precision"
+          />
 
-            <Details
-              position="Cheif Executive Officer"
-              company="Mâlm UF"
-              companyLink="https://www.instagram.com/malm_uf/"
-              time="Aug 2024-Present"
-              address="Halmstad, Sweden."
-              work="As CEO of Mâlm UF, I proudly lead a newly founded company in the clothing industry. With a passionate ambition, we strive to create and deliver something unique in the fashion world. Our product strategy initially focuses on offering an exclusive line of both zip hoodies, t-shirts and zip sweaters. This strategy has been designed through careful market research and design analysis, which aims to satisfy our customers' needs and expectations through a combination of style and quality.
-              Our clear focus on this specific product category reflects our desire to offer a product experience that truly stands out. Through this initiative, we represent our commitment to innovative design and high quality craftsmanship."
-            /> 
-            <Details
-              position="Receptionist"
-              company="Nordic Wellness"
-              companyLink="https://nordicwellness.se/vara-klubbar/laholm/laholm-angelholmsvagen/"
-              time="Feb 2024-Feb 2025"
-              address="Laholm, Angelholmsvagen.             "
-              work="Holding the role of receptionist at Nordic Wellness, I have played a pivotal role in delivering exemplary customer service and cultivating a favorable initial impression for our clients. I have adeptly managed a range of responsibilities to facilitate seamless operations, encompassing call handling, subscription management, and administrative tasks. My dedication to surpassing expectations has garnered highly favorable responses."
-            />
-            <Details
-              position="Foreign Exchange Trader"
-              company="Forex"
-              companyLink=""
-              time="May 2023-Present"
-              address="Sweden."
-              work="
-    
-              Experienced Foreign Exchange (Forex) Trader with a solid background in currency trading and financial markets.
-              
-              By combining technical and fundamental analysis and the use of trading platforms and tools, I make informed decisions and adapt quickly to market changes. My ability to work under pressure and manage rapid market movements has been crucial in securing successful results.
-              
-              I am passionate about continuous learning and keeping up to date with the latest trends in the currency markets."
-            />
-            <Details
-              position="Cleaner & Receptionist"
-              company="Hallandsgarden"
-              companyLink="https://hallandsgarden.se/"
-              time="June 2022-Aug 2023"
-              address="Mellbystrand, Laholm."
-              work="As responsible for the cleaning and maintenance of rooms, kitchens,
-              toilets and washrooms, I mastered various
-              tasks. I also had the chance to work as a
-              receptionist, where I professionally welcomed customers from different
-              different backgrounds, which contributed to a positive customer experience."
-            />
-            <Details
-              position="Gardener"
-              company="Laholmshem"
-              companyLink="https://www.laholmshem.se/"
-              time="Jun 2022-Aug 2022"
-              address="Laholm, Laholm."
-              work="During my summer holiday work, I was responsible for a wide
-              set of tasks,
-              including the trimming of hedges, installation and repair of
-              various objects. I was able to adapt to a variety of working
-              working environments, which contributed to my
-              ability to deal with changing situations in a professional
-              professional manner."
-            />
+          <Details
+            position="Senior Sales Associate"
+            company="Key Solutions"
+            companyLink="https://www.keysolutions.se"
+            time="Oct 2024–Dec 2024"
+            address="Gothenburg, Sweden · Hybrid"
+            work="• Ranked #2 two months in a row out of 100+ salespeople in door-to-door sales
+• Closed deals totalling multiple 7-figure amounts
+• Delivered 5–6-figure deals on a daily basis
+• Led client meetings and conducted high-volume cold outreach
+• Performed in-depth needs analyses to deliver tailored, high-value solutions
+• Built and maintained long-term client relationships driving repeat business
+• Mentored colleagues and shared proven sales strategies and insights"
+          />
 
+          <Details
+            position="Receptionist"
+            company="Nordic Wellness"
+            companyLink="https://nordicwellness.se"
+            time="Feb 2024–Jan 2025"
+            address="Laholm, Sweden · On-site"
+            work="• Welcomed and served 350+ customers daily in a high-pace environment
+• Handled cash and transactions of five-figure amounts daily with high precision
+• Delivered exceptional customer service under stress and peak hours
+• Managed queues and optimized customer experience for efficient operations
+• Resolved customer issues quickly with focus on a positive experience"
+          />
 
+          <Details
+            position="CEO & Founder"
+            company="Mâlm UF"
+            companyLink="https://www.instagram.com/malm_uf/"
+            time="Aug 2023–Jul 2024"
+            address="Halmstad, Sweden · Hybrid"
+            work="• Founded and ran a UF (Young Enterprise) company in sales and marketing
+• Started as a marketing agency, pivoted to e-commerce (clothing — French cotton sweatshirts)
+• Generated five-figure revenue within months as a solo operator after the team left
+• Ran the entire business solo — from outreach to closing
+• Won award for best salesperson at the event
+• Offered employment at Key Solutions based on performance"
+          />
 
-          </ul>
-        </div>
-        </div>
-    );
+          <Details
+            position="Receptionist & Cleaner"
+            company="Hallandsgården"
+            companyLink="https://hallandsgarden.se"
+            time="Apr 2022–Sep 2023"
+            address="Mellbystrand, Sweden · On-site"
+            work="• Handled 25+ guests daily across reception and housekeeping
+• Delivered service to customers from different countries and cultures
+• Maintained high standards in cleaning and upkeep of rooms, kitchens and common areas
+• Managed multiple responsibilities simultaneously with high quality and attention to detail"
+          />
+
+          <Details
+            position="Gardener"
+            company="Laholmshem"
+            companyLink="https://www.laholmshem.se"
+            time="Jul 2022–Aug 2022"
+            address="Laholm, Sweden · On-site"
+            work="Precision hedge trimming, professional lawn mowing, and installation and repair of various garden objects. Adapted to varied working environments and delivered high-quality outdoor maintenance for residential properties."
+          />
+
+          <Details
+            position="Farm Worker"
+            company="Skogaby Lantbruk"
+            companyLink=""
+            time="May 2021–Aug 2021"
+            address="Laholm, Sweden · On-site"
+            work="• Responsible for cleanliness and structure in large farm environments (barn, work areas)
+• Operated tractors and handled heavy machinery
+• Moved materials and equipment to optimize workflow
+• Worked independently with high discipline and attention to detail"
+          />
+
+        </ul>
+      </div>
+    </div>
+  );
 };
 
 export default Experience;
