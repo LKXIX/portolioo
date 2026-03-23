@@ -3,8 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import profile from "../../public/images/profile/liam2.jpg";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
@@ -35,6 +35,129 @@ function AnimatedNumberFramerMotion({ value }) {
   return <span ref={ref}>{value}</span>;
 }
 
+// ─── Age Counter ────────────────────────────────────────────────────────────
+const BIRTHDAY = new Date("2005-06-15T00:00:00");
+
+function getAge() {
+  const now = new Date();
+  const diff = now - BIRTHDAY;
+  const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+  const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
+  const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+  return { years, months, days };
+}
+
+const AgeCounter = () => {
+  const [age, setAge] = useState(getAge());
+  useEffect(() => {
+    const t = setInterval(() => setAge(getAge()), 1000 * 60 * 60);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <div className="my-16 flex flex-col items-center gap-4">
+      <h2 className="font-bold text-4xl text-center text-dark dark:text-light">Age</h2>
+      <div className="flex gap-6 sm:gap-3">
+        {[{ v: age.years, l: "years" }, { v: age.months, l: "months" }, { v: age.days, l: "days" }].map(({ v, l }) => (
+          <motion.div
+            key={l}
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center gap-1 px-6 py-4 rounded-xl border border-solid border-dark/20 dark:border-light/20 min-w-[80px]"
+          >
+            <span className="text-4xl font-bold text-primary dark:text-primaryDark sm:text-3xl">{v}</span>
+            <span className="text-xs text-dark/50 dark:text-light/50 uppercase tracking-widest">{l}</span>
+          </motion.div>
+        ))}
+      </div>
+      <p className="text-sm text-dark/50 dark:text-light/50">Born 15 June 2005 · Laholm, Sweden</p>
+    </div>
+  );
+};
+
+// ─── Bookshelf ───────────────────────────────────────────────────────────────
+const books = [
+  { title: "The Lean Startup", author: "Eric Ries", emoji: "📗" },
+  { title: "Zero to One", author: "Peter Thiel", emoji: "📘" },
+  { title: "The Hard Thing About Hard Things", author: "Ben Horowitz", emoji: "📕" },
+  { title: "$100M Offers", author: "Alex Hormozi", emoji: "📙" },
+  { title: "Deep Work", author: "Cal Newport", emoji: "📓" },
+  { title: "Atomic Habits", author: "James Clear", emoji: "📔" },
+];
+
+const Bookshelf = () => (
+  <div className="my-32">
+    <h2 className="font-bold text-8xl mb-16 w-full text-center md:text-6xl xs:text-4xl md:mb-8">Bookshelf</h2>
+    <p className="text-center text-dark/60 dark:text-light/60 mb-10 max-w-xl mx-auto text-sm">
+      Books that have shaped how I think about building, selling, and growing.
+    </p>
+    <div className="grid grid-cols-3 gap-4 lg:grid-cols-2 sm:grid-cols-1">
+      {books.map((b, i) => (
+        <motion.div
+          key={b.title}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: i * 0.07 }}
+          viewport={{ once: true }}
+          className="flex items-center gap-3 p-4 rounded-xl border border-solid border-dark/10 dark:border-light/10 hover:border-primary dark:hover:border-primaryDark transition-colors"
+        >
+          <span className="text-3xl">{b.emoji}</span>
+          <div>
+            <p className="font-semibold text-sm text-dark dark:text-light">{b.title}</p>
+            <p className="text-xs text-dark/50 dark:text-light/50">{b.author}</p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+);
+
+// ─── 2026 Goals ──────────────────────────────────────────────────────────────
+const goals = [
+  { text: "Get accepted into The Residency, San Francisco", done: true },
+  { text: "Launch Rankad.ai public beta", done: true },
+  { text: "Get featured in Breakit", done: true },
+  { text: "Reach 100 paying customers on Rankad.ai", done: false },
+  { text: "Raise pre-seed funding", done: false },
+  { text: "Grow LK Innovations to 75+ clients", done: false },
+  { text: "Speak at a startup or tech event", done: false },
+  { text: "Complete IT Security degree (Teknikhögskolan)", done: false },
+];
+
+const Goals2026 = () => (
+  <div className="my-32">
+    <h2 className="font-bold text-8xl mb-4 w-full text-center md:text-6xl xs:text-4xl">2026 Goals</h2>
+    <p className="text-center text-dark/60 dark:text-light/60 mb-12 text-sm">Public accountability. Updated in real time.</p>
+    <div className="flex flex-col gap-3 max-w-2xl mx-auto">
+      {goals.map((g, i) => (
+        <motion.div
+          key={g.text}
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: i * 0.06 }}
+          viewport={{ once: true }}
+          className={`flex items-center gap-3 p-4 rounded-xl border border-solid transition-colors
+            ${g.done
+              ? "border-green-500/30 bg-green-500/5"
+              : "border-dark/10 dark:border-light/10"
+            }`}
+        >
+          <span className={`text-lg flex-shrink-0 ${g.done ? "text-green-500" : "text-dark/20 dark:text-light/20"}`}>
+            {g.done ? "✓" : "○"}
+          </span>
+          <span className={`text-sm font-medium ${g.done ? "text-dark/50 dark:text-light/50 line-through" : "text-dark dark:text-light"}`}>
+            {g.text}
+          </span>
+        </motion.div>
+      ))}
+    </div>
+    <p className="text-center text-xs text-dark/30 dark:text-light/30 mt-6">
+      {goals.filter((g) => g.done).length}/{goals.length} completed
+    </p>
+  </div>
+);
+
+// ─── Schemas ─────────────────────────────────────────────────────────────────
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -231,9 +354,13 @@ export default function About() {
             </div>
           </div>
 
+          <AgeCounter />
           <Skills />
           <Experience />
           <Education />
+
+          <Bookshelf />
+          <Goals2026 />
 
           {/* FAQ Section — crawlable, schema-backed */}
           <section className="mt-32 w-full" aria-label="Frequently asked questions about Liam Karlsson">

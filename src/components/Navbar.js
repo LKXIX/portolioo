@@ -85,11 +85,12 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center lg:hidden">
         <nav className="flex items-center justify-center">
           <CustomLink className="mr-4" href="/" title="Home" />
-          <CustomLink className="mx-4" href="/about" title="About" />
+          <CustomLink className="mx-4" href="/blog" title="Blog" />
           <CustomLink className="mx-4" href="/projects" title="Projects" />
           <CustomLink className="mx-4" href="/articles" title="Achievements" />
           <CustomLink className="mx-4" href="/media" title="Media" />
-          <CustomLink className="ml-4" href="/blog" title="Blog" />
+          <CustomLink className="mx-4" href="/stack" title="Stack" />
+          <CustomLink className="ml-4" href="/about" title="About" />
         </nav>
         <nav className="flex items-center justify-center flex-wrap lg:mt-2">
           <motion.a
@@ -163,11 +164,12 @@ const Navbar = () => {
         >
           <nav className="flex items-center justify-center flex-col">
             <CustomMobileLink toggle={handleClick} className="lg:m-0 lg:my-2" href="/" title="Home" />
-            <CustomMobileLink toggle={handleClick} className="lg:m-0 lg:my-2" href="/about" title="About" />
+            <CustomMobileLink toggle={handleClick} className="lg:m-0 lg:my-2" href="/blog" title="Blog" />
             <CustomMobileLink toggle={handleClick} className="lg:m-0 lg:my-2" href="/projects" title="Projects" />
             <CustomMobileLink toggle={handleClick} className="lg:m-0 lg:my-2" href="/articles" title="Achievements" />
             <CustomMobileLink toggle={handleClick} className="lg:m-0 lg:my-2" href="/media" title="Media" />
-            <CustomMobileLink toggle={handleClick} className="lg:m-0 lg:my-2" href="/blog" title="Blog" />
+            <CustomMobileLink toggle={handleClick} className="lg:m-0 lg:my-2" href="/stack" title="Stack" />
+            <CustomMobileLink toggle={handleClick} className="lg:m-0 lg:my-2" href="/about" title="About" />
           </nav>
           <nav className="flex items-center justify-center mt-2">
             <motion.a

@@ -4,7 +4,7 @@ import TransitionEffect from "@/components/TransitionEffect";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { getAllPosts } from "@/lib/sanity";
+import { getAllPosts, urlFor } from "@/lib/sanity";
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -29,36 +29,68 @@ function formatDate(iso) {
   return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 }
 
-const PostCard = ({ title, slug, excerpt, publishedAt, tags }) => (
-  <motion.article
-    initial={{ y: 40, opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
-    viewport={{ once: true }}
-    className="w-full p-6 my-2 rounded-xl border border-solid border-dark border-r-4 border-b-4
-      bg-light text-dark dark:bg-dark dark:border-light dark:text-light
-      flex flex-col gap-3"
-  >
-    <div className="flex flex-wrap gap-2">
-      {(tags || []).map((tag) => (
-        <span key={tag} className="text-xs font-medium px-2 py-1 rounded-full bg-primary/10 text-primary dark:bg-primaryDark/10 dark:text-primaryDark">
-          {tag}
-        </span>
-      ))}
-    </div>
-    <Link href={`/blog/${slug?.current || slug}`} className="text-2xl font-bold hover:underline md:text-xl xs:text-lg">
-      {title}
-    </Link>
-    {excerpt && <p className="text-dark/70 dark:text-light/70 text-sm leading-relaxed">{excerpt}</p>}
-    <div className="flex items-center justify-between mt-2">
-      <time dateTime={publishedAt} className="text-xs text-dark/50 dark:text-light/50">
-        {formatDate(publishedAt)}
-      </time>
-      <Link href={`/blog/${slug?.current || slug}`} className="text-sm font-semibold text-primary dark:text-primaryDark hover:underline">
-        Read →
-      </Link>
-    </div>
-  </motion.article>
-);
+const PostCard = ({ title, slug, excerpt, publishedAt, tags, coverImage }) => {
+  const postSlug = slug?.current || slug;
+  const imgUrl = coverImage?.asset ? urlFor(coverImage).width(800).height(420).url() : null;
+
+  return (
+    <motion.article
+      initial={{ y: 40, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
+      viewport={{ once: true }}
+      className="w-full my-3 rounded-xl border border-solid border-dark border-r-4 border-b-4
+        bg-light text-dark dark:bg-dark dark:border-light dark:text-light overflow-hidden"
+    >
+      {/* Cover image */}
+      {imgUrl && (
+        <Link href={`/blog/${postSlug}`}>
+          <img
+            src={imgUrl}
+            alt={coverImage?.alt || title}
+            className="w-full h-48 object-cover hover:opacity-90 transition-opacity"
+            loading="lazy"
+          />
+        </Link>
+      )}
+
+      <div className="p-6 flex flex-col gap-3">
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2">
+          {(tags || []).map((tag) => (
+            <span key={tag} className="text-xs font-medium px-2 py-1 rounded-full bg-primary/10 text-primary dark:bg-primaryDark/10 dark:text-primaryDark">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Title */}
+        <Link href={`/blog/${postSlug}`} className="text-2xl font-bold hover:underline md:text-xl xs:text-lg">
+          {title}
+        </Link>
+
+        {/* Excerpt */}
+        {excerpt && <p className="text-dark/70 dark:text-light/70 text-sm leading-relaxed">{excerpt}</p>}
+
+        {/* Meta: author + date + read link */}
+        <div className="flex items-center justify-between mt-1 flex-wrap gap-2">
+          <div className="flex items-center gap-2 text-xs text-dark/50 dark:text-light/50">
+            <img
+              src="/images/profile/liam2.jpg"
+              alt="Liam Karlsson"
+              className="w-6 h-6 rounded-full object-cover"
+            />
+            <span className="font-medium text-dark/70 dark:text-light/70">Liam Karlsson</span>
+            <span>·</span>
+            <time dateTime={publishedAt}>{formatDate(publishedAt)}</time>
+          </div>
+          <Link href={`/blog/${postSlug}`} className="text-sm font-semibold text-primary dark:text-primaryDark hover:underline">
+            Read →
+          </Link>
+        </div>
+      </div>
+    </motion.article>
+  );
+};
 
 export async function getStaticProps() {
   let posts = [];

@@ -3,11 +3,18 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import StatusBar from "@/components/StatusBar";
+import CursorTrail from "@/components/CursorTrail";
+import EasterEgg from "@/components/EasterEgg";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
+
+const SpotifyNowPlaying = dynamic(() => import("@/components/SpotifyNowPlaying"), { ssr: false });
+const VisitorCounter = dynamic(() => import("@/components/VisitorCounter"), { ssr: false });
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 
@@ -58,13 +65,21 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       <SpeedInsights />
+      <CursorTrail />
+      <EasterEgg />
       <main
         className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen h-full`}
       >
+        <StatusBar />
         <Navbar />
         <AnimatePresence initial={false} mode="wait">
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>
+        {/* Spotify + visitor counter in footer area */}
+        <div className="flex flex-wrap items-center justify-center gap-4 py-4 px-8 border-t border-solid border-dark/5 dark:border-light/5">
+          <SpotifyNowPlaying />
+          <VisitorCounter />
+        </div>
         <Footer />
       </main>
     </>
