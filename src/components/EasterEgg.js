@@ -549,6 +549,58 @@ const EGGS = [
     message: "↑↑↓↓←→←→BA — you clearly have too much time. Respect.",
     confetti: true,
   },
+
+  // ── Personal favourites ────────────────────────────────────────────────────
+  {
+    trigger: "megamare",
+    emoji: "🌊",
+    message: "Megamare by Orto Parisi. The ocean in a bottle. Impeccable taste.",
+    confetti: false,
+    emojiShower: "🌊",
+  },
+  {
+    trigger: "orto parisi",
+    emoji: "🫧",
+    message: "A man who wears Orto Parisi doesn't need to say anything.",
+    confetti: false,
+  },
+  {
+    trigger: "taycan",
+    emoji: "⚡",
+    message: "Porsche Taycan. Electric. Silent. Devastating. The dream.",
+    confetti: true,
+    emojiShower: "🏎️",
+  },
+  {
+    trigger: "porsche",
+    emoji: "🏎️",
+    message: "There is no substitute. Especially not a Taycan.",
+    confetti: true,
+  },
+  {
+    trigger: "cars",
+    emoji: "🚗",
+    message: "Cars are sculptures that move at 300 km/h. Pure art.",
+    confetti: false,
+  },
+  {
+    trigger: "bikes",
+    emoji: "🏍️",
+    message: "Two wheels. Full focus. Nothing else exists.",
+    confetti: false,
+  },
+  {
+    trigger: "motorcycle",
+    emoji: "🏍️",
+    message: "The most honest machine ever built.",
+    confetti: false,
+  },
+  {
+    trigger: "henry ford",
+    emoji: "💡",
+    message: "Whether you think you can, or think you can't — you're right. Living by this.",
+    confetti: false,
+  },
 ];
 
 const MAX_TRIGGER_LEN = Math.max(...EGGS.map((e) => e.trigger.length));

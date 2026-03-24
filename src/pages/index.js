@@ -173,7 +173,7 @@ export default function Home() {
               className="flex items-center justify-between pt-6 pb-0 px-1"
             >
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-dark/30 dark:text-light/30">
-                Stockholm · San Francisco
+                Gothenburg · San Francisco
               </span>
               <span className="flex items-center gap-2 text-xs font-medium text-dark/60 dark:text-light/60 border border-dark/10 dark:border-light/10 rounded-full px-3 py-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
@@ -182,7 +182,7 @@ export default function Home() {
             </motion.div>
 
             {/* ── Stacked layout: names wrap the photo ── */}
-            <div className="relative w-full" style={{ minHeight: "clamp(320px, 60vh, 620px)" }}>
+            <div className="relative w-full" style={{ minHeight: "clamp(420px, 80vh, 820px)" }}>
 
               {/* LIAM — top left, overlaps photo */}
               <motion.h1
@@ -218,9 +218,9 @@ export default function Home() {
                   alt="Liam Karlsson"
                   width={760}
                   height={1000}
-                  className="h-full w-auto object-contain object-bottom drop-shadow-2xl"
+                  className="w-auto object-contain object-bottom drop-shadow-2xl"
                   priority
-                  style={{ maxHeight: "clamp(320px, 60vh, 620px)" }}
+                  style={{ height: "clamp(420px, 80vh, 820px)", marginBottom: "-2px" }}
                 />
               </motion.div>
 
@@ -230,13 +230,11 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="absolute left-0 z-20 sm:hidden"
-                style={{ top: "50%", transform: "translateY(-50%)", maxWidth: "160px" }}
+                style={{ top: "50%", transform: "translateY(-50%)", maxWidth: "170px" }}
               >
-                <p className="text-xs text-dark/50 dark:text-light/50 leading-relaxed">
-                  Co-founder of{" "}
-                  <a href="https://rankad.ai" target="_blank" rel="noopener nofollow" className="text-dark dark:text-light font-semibold hover:underline underline-offset-2">Rankad.ai</a>
-                  {" "}& founder of{" "}
-                  <a href="https://lkinnovations.se" target="_blank" rel="noopener nofollow" className="text-dark dark:text-light font-semibold hover:underline underline-offset-2">LK Innovations</a>.
+                <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.6, color: "inherit" }} className="text-dark/70 dark:text-light/70">
+                  "Whether you think you can, or think you can't —{" "}
+                  <em style={{ fontStyle: "normal", borderBottom: "1px solid currentColor" }}>you're right.</em>"
                 </p>
               </motion.div>
 
@@ -246,15 +244,12 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.35 }}
                 className="absolute right-0 z-20 text-right sm:hidden"
-                style={{ top: "50%", transform: "translateY(-50%)", maxWidth: "160px" }}
+                style={{ top: "50%", transform: "translateY(-50%)", maxWidth: "170px" }}
               >
-                <p className="text-xs text-dark/50 dark:text-light/50 leading-relaxed">
-                  Selected into{" "}
-                  <span className="text-dark dark:text-light font-semibold">The Residency</span>
-                  {" "}SF out of 3,500+ applicants.
-                </p>
-                <p className="text-xs text-dark/40 dark:text-light/40 mt-2">
-                  50+ web &amp; SEO projects.
+                <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.6 }} className="text-dark/70 dark:text-light/70">
+                  Founder.<br />
+                  Builder.<br />
+                  20 years old.
                 </p>
               </motion.div>
 
@@ -268,15 +263,15 @@ export default function Home() {
               className="flex flex-col items-center gap-3 mt-6"
             >
               {/* Mobile-only description */}
-              <p className="hidden sm:block text-sm text-dark/50 dark:text-light/50 text-center max-w-xs leading-relaxed">
-                Co-founder of <a href="https://rankad.ai" target="_blank" rel="noopener nofollow" className="text-dark dark:text-light font-semibold">Rankad.ai</a> · The Residency SF · 50+ projects.
+              <p className="hidden sm:block text-sm text-dark/50 dark:text-light/50 text-center max-w-xs leading-relaxed" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic" }}>
+                Making brands the answer AI gives.
               </p>
               <div className="flex items-center gap-4">
                 <Link
                   href="mailto:hi@liamkarlsson.se"
                   className="flex items-center gap-1.5 rounded-lg border-2 border-solid bg-dark px-5 py-2.5 text-sm font-semibold text-light hover:bg-transparent hover:text-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light transition-all duration-200"
                 >
-                  Hire me <LinkArrow className="!w-4" />
+                  Contact me <LinkArrow className="!w-4" />
                 </Link>
                 <Link
                   href="/projects"
