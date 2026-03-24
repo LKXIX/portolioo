@@ -107,7 +107,7 @@ export default function Stack() {
 
           <div className="flex flex-col gap-12 w-full">
             {stack.map((section) => (
-              <div key={section.category}>
+              <div key={section.category} data-egg="stack-category">
                 <h2 className="text-xs font-bold uppercase tracking-widest text-dark/40 dark:text-light/40 mb-4">
                   {section.category}
                 </h2>

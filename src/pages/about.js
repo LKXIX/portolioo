@@ -54,7 +54,7 @@ const AgeCounter = () => {
     return () => clearInterval(t);
   }, []);
   return (
-    <div className="my-16 flex flex-col items-center gap-4">
+    <div className="my-16 flex flex-col items-center gap-4" data-egg="age-counter" style={{ cursor: "default" }}>
       <h2 className="font-bold text-4xl text-center text-dark dark:text-light">Age</h2>
       <div className="flex gap-6 sm:gap-3">
         {[{ v: age.years, l: "years" }, { v: age.months, l: "months" }, { v: age.days, l: "days" }].map(({ v, l }) => (
@@ -314,6 +314,7 @@ export default function About() {
                 className="h-auto w-full rounded-2xl"
                 src={profile}
                 alt="Liam Karlsson"
+                data-egg="profile-photo"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"

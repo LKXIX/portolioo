@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion } from "framer-motion";
@@ -162,9 +163,15 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mt-2 text-sm font-medium text-dark/50 dark:text-light/50 tracking-widest uppercase"
+              className="mt-4 text-base text-dark/60 dark:text-light/60 leading-relaxed max-w-xl"
             >
-              Co-founder @ Rankad.ai · Founder @ LK Innovations · The Residency SF
+              I co-founded{" "}
+              <a href="https://rankad.ai" target="_blank" rel="noopener nofollow" className="text-dark dark:text-light font-medium hover:underline underline-offset-2">Rankad.ai</a>
+              {" "}— an AI search optimization platform helping brands become the answer inside ChatGPT, Gemini, and Perplexity. Selected into{" "}
+              <span className="text-dark dark:text-light font-medium">The Residency, San Francisco</span>{" "}
+              out of 3,500+ global applicants. I also run{" "}
+              <a href="https://lkinnovations.se" target="_blank" rel="noopener nofollow" className="text-dark dark:text-light font-medium hover:underline underline-offset-2">LK Innovations</a>
+              {" "}— 50+ web &amp; SEO projects delivered.
             </motion.p>
 
             {/* CTAs */}
@@ -204,6 +211,41 @@ export default function Home() {
           </div>
 
           <LogoCloud logos={pressLogos} />
+
+          {/* Cal.com inline embed */}
+          <div style={{ marginTop: "5rem" }}>
+            <p style={{
+              fontSize: "0.65rem",
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.15em",
+              textAlign: "center",
+              marginBottom: "1.5rem",
+              color: "rgba(130,130,130,0.8)",
+            }}>
+              Book a quick call
+            </p>
+            <div
+              id="my-cal-inline-quick-chat-liam"
+              style={{ width: "100%", height: "600px", overflow: "scroll", borderRadius: "1rem", border: "1px solid rgba(255,255,255,0.07)" }}
+            />
+            <Script
+              id="cal-embed"
+              strategy="lazyOnload"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                  Cal("init", "quick-chat-liam", {origin:"https://app.cal.com"});
+                  Cal.ns["quick-chat-liam"]("inline", {
+                    elementOrSelector:"#my-cal-inline-quick-chat-liam",
+                    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+                    calLink: "rankad/quick-chat-liam",
+                  });
+                  Cal.ns["quick-chat-liam"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#6366f1"},"dark":{"cal-brand":"#6366f1"}},"hideEventTypeDetails":false,"layout":"month_view"});
+                `,
+              }}
+            />
+          </div>
 
         </Layout>
 

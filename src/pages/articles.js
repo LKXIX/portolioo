@@ -88,7 +88,8 @@ const Article = ({ img, title, date, link }) => {
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-2 rounded-xl flex sm:flex-col items-center justify-between 
+      data-egg="cert-card"
+      className="relative w-full p-4 py-6 my-2 rounded-xl flex sm:flex-col items-center justify-between
       bg-light text-dark first:mt-0 border border-solid border-dark
       border-r-4 border-b-4 dark:bg-dark dark:border-light
       "
@@ -104,7 +105,7 @@ const Article = ({ img, title, date, link }) => {
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="relative w-full p-4 col-span-1 bg-light border border-dark border-solid rounded-2xl 
+    <li data-egg="cert-card" className="relative w-full p-4 col-span-1 bg-light border border-dark border-solid rounded-2xl
     dark:bg-dark dark:border-light">
       <div
         className="absolute  top-0 -right-3 w-[102%] h-[103%] rounded-[2rem]  rounded-br-3xl bg-dark 

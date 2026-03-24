@@ -95,7 +95,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="border-t border-solid border-dark/10 dark:border-light/10 pt-6 flex items-center justify-between sm:flex-col sm:gap-3 sm:text-center">
-          <span className="text-xs text-dark/40 dark:text-light/40">
+          <span className="text-xs text-dark/40 dark:text-light/40" data-egg="footer-secret" style={{ cursor: "default" }}>
             {new Date().getFullYear()} &copy; Liam Karlsson. All Rights Reserved.
           </span>
           <span className="text-xs text-dark/40 dark:text-light/40">

@@ -26,6 +26,7 @@ const SkillTag = ({ name, index }) => (
     transition={{ duration: 0.4, delay: index * 0.04 }}
     viewport={{ once: true }}
     whileHover={{ scale: 1.05 }}
+    data-egg="skill-tag"
     className="inline-flex items-center px-4 py-2 rounded-lg border border-solid border-dark/20 dark:border-light/20
       bg-light dark:bg-dark text-dark dark:text-light font-medium text-sm cursor-default
       hover:border-primary dark:hover:border-primaryDark hover:text-primary dark:hover:text-primaryDark

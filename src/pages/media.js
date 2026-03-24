@@ -68,6 +68,7 @@ const PressCard = ({ publication, title, date, summary, link, tag }) => (
     initial={{ y: 200 }}
     whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
     viewport={{ once: true }}
+    data-egg="press-card"
     className="relative w-full p-4 py-6 my-2 rounded-xl flex sm:flex-col items-start justify-between
     bg-light text-dark first:mt-0 border border-solid border-dark
     border-r-4 border-b-4 dark:bg-dark dark:border-light gap-4
