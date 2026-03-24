@@ -154,8 +154,22 @@ export default function Home() {
           inset: 0,
           zIndex: 0,
           pointerEvents: "none",
-          backgroundImage: "radial-gradient(circle, rgba(99,102,241,0.1) 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
+          backgroundImage:
+            "radial-gradient(circle, rgba(120,120,140,0.13) 1.2px, transparent 1.2px)",
+          backgroundSize: "20px 20px",
+          backgroundPosition: "0 0",
+        }}
+      />
+      {/* Diagonal accent lines — very subtle, like asics grid */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 0,
+          pointerEvents: "none",
+          backgroundImage:
+            "repeating-linear-gradient(45deg, rgba(120,120,140,0.035) 0px, rgba(120,120,140,0.035) 1px, transparent 1px, transparent 40px)",
         }}
       />
 
@@ -182,7 +196,7 @@ export default function Home() {
             </motion.div>
 
             {/* ── Stacked layout: names wrap the photo ── */}
-            <div className="relative w-full" style={{ minHeight: "clamp(420px, 80vh, 820px)" }}>
+            <div className="relative w-full" style={{ minHeight: "clamp(500px, 90vh, 960px)" }}>
 
               {/* LIAM — top left, overlaps photo */}
               <motion.h1
@@ -220,7 +234,7 @@ export default function Home() {
                   height={1000}
                   className="w-auto object-contain object-bottom drop-shadow-2xl"
                   priority
-                  style={{ height: "clamp(420px, 80vh, 820px)", marginBottom: "-2px" }}
+                  style={{ height: "clamp(500px, 90vh, 960px)", marginBottom: "-2px" }}
                 />
               </motion.div>
 
@@ -248,7 +262,27 @@ export default function Home() {
               >
                 <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.6 }} className="text-dark/70 dark:text-light/70">
                   Founder.<br />
-                  Builder.<br />
+                  <span style={{ position: "relative", display: "inline-block" }}>
+                    Builder.
+                    <motion.svg
+                      viewBox="0 0 70 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{ position: "absolute", bottom: "-4px", left: 0, width: "100%", height: "10px", overflow: "visible" }}
+                      aria-hidden="true"
+                    >
+                      <motion.path
+                        d="M2 6 C8 2, 16 9, 24 5 C32 1, 40 8, 48 4 C56 0, 63 7, 68 5"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        fill="none"
+                        initial={{ pathLength: 0, opacity: 0 }}
+                        animate={{ pathLength: 1, opacity: 1 }}
+                        transition={{ duration: 1, delay: 1.2, ease: "easeInOut" }}
+                      />
+                    </motion.svg>
+                  </span><br />
                   20 years old.
                 </p>
               </motion.div>

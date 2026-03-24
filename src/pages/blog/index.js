@@ -92,6 +92,27 @@ const PostCard = ({ title, slug, excerpt, publishedAt, tags, coverImage }) => {
   );
 };
 
+const staticPosts = [
+  {
+    _id: "static-aeo",
+    title: "What Is AEO? Answer Engine Optimization Explained",
+    slug: { current: "what-is-aeo" },
+    excerpt: "AEO is the practice of structuring content so AI systems like ChatGPT, Perplexity, and Google AI Overviews cite you as the answer. Here's how it works.",
+    publishedAt: "2025-11-14",
+    tags: ["AEO", "AI Search", "SEO"],
+    coverImage: null,
+  },
+  {
+    _id: "static-chatgpt-citations",
+    title: "How to Get Your Brand Cited by ChatGPT and Perplexity",
+    slug: { current: "how-to-get-cited-by-chatgpt" },
+    excerpt: "A practical guide to getting cited by ChatGPT, Perplexity, and Google AI Overviews. Covers crawler access, schema markup, and brand signal building.",
+    publishedAt: "2025-12-03",
+    tags: ["AEO", "ChatGPT", "AI Citations"],
+    coverImage: null,
+  },
+];
+
 export async function getStaticProps() {
   let posts = [];
   try {
@@ -99,7 +120,8 @@ export async function getStaticProps() {
   } catch {
     // No Sanity project configured yet — show empty state
   }
-  return { props: { posts: posts || [] }, revalidate: 60 };
+  const allPosts = [...(posts || []), ...staticPosts.filter((sp) => !(posts || []).some((p) => p.slug?.current === sp.slug.current))];
+  return { props: { posts: allPosts }, revalidate: 60 };
 }
 
 export default function Blog({ posts }) {
@@ -130,18 +152,11 @@ export default function Blog({ posts }) {
             Thoughts on AI search optimization, AEO, web development, and building startups.
           </p>
 
-          {posts.length === 0 ? (
-            <div className="w-full text-center py-24 text-dark/50 dark:text-light/50">
-              <p className="text-xl font-medium">No posts yet — check back soon.</p>
-              <p className="text-sm mt-2">Blog posts are managed via Sanity CMS at <span className="font-mono">/studio</span>.</p>
-            </div>
-          ) : (
-            <div className="flex flex-col w-full">
-              {posts.map((post) => (
-                <PostCard key={post._id} {...post} />
-              ))}
-            </div>
-          )}
+          <div className="flex flex-col w-full">
+            {posts.map((post) => (
+              <PostCard key={post._id} {...post} />
+            ))}
+          </div>
 
           <nav className="mt-12 flex flex-wrap gap-4 justify-center" aria-label="Explore more">
             <Link href="/" className="inline-block rounded-lg border-2 border-solid bg-dark px-4 py-2 font-semibold text-light hover:border-dark hover:bg-transparent hover:text-dark dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light">Home</Link>
