@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
-import profilePic from "../../public/images/profile/liam2.jpg";
+import profilePic from "../../public/images/profile/liam-hero.png";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
@@ -154,88 +154,140 @@ export default function Home() {
           inset: 0,
           zIndex: 0,
           pointerEvents: "none",
-          backgroundImage: "radial-gradient(circle, rgba(99,102,241,0.13) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgba(99,102,241,0.1) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
         }}
       />
 
-      <article className="relative flex min-h-screen items-center text-dark dark:text-light sm:items-start" style={{ zIndex: 1 }}>
-        <Layout className="!pt-16 md:!pt-20 sm:!pt-20">
+      <article className="relative flex min-h-screen items-start text-dark dark:text-light" style={{ zIndex: 1 }}>
+        <Layout className="!pt-0 !pb-0 md:!pt-0 sm:!pt-0">
 
-          {/* Centered hero */}
-          <div className="flex flex-col items-center text-center w-full max-w-3xl mx-auto">
+          {/* ── Magazine hero ── */}
+          <div className="w-full">
 
-            {/* Photo */}
+            {/* Top label row */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="mb-6"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center justify-between pt-8 pb-2 px-1 md:pt-6 sm:pt-4"
             >
-              <Image
-                src={profilePic}
-                alt="Liam Karlsson"
-                width={96}
-                height={96}
-                className="rounded-full object-cover border-2 border-dark/10 dark:border-light/10 shadow-lg"
-                priority
-              />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-dark/30 dark:text-light/30">
+                Stockholm · San Francisco
+              </span>
+              {/* Status badge */}
+              <span className="flex items-center gap-2 text-xs font-medium text-dark/60 dark:text-light/60 border border-dark/10 dark:border-light/10 rounded-full px-3 py-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                Building Rankad.ai
+              </span>
             </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="py-2 text-dark dark:text-light text-6xl font-bold capitalize xl:text-5xl md:text-4xl sm:text-3xl"
-            >
-              Liam Karlsson
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-4 text-base text-dark/60 dark:text-light/60 leading-relaxed max-w-xl"
-            >
-              I co-founded{" "}
-              <a href="https://rankad.ai" target="_blank" rel="noopener nofollow" className="text-dark dark:text-light font-medium hover:underline underline-offset-2">Rankad.ai</a>
-              {" "}— an AI search optimization platform helping brands become the answer inside ChatGPT, Gemini, and Perplexity. Selected into{" "}
-              <span className="text-dark dark:text-light font-medium">The Residency, San Francisco</span>{" "}
-              out of 3,500+ global applicants. I also run{" "}
-              <a href="https://lkinnovations.se" target="_blank" rel="noopener nofollow" className="text-dark dark:text-light font-medium hover:underline underline-offset-2">LK Innovations</a>
-              {" "}— 50+ web &amp; SEO projects delivered.
-            </motion.p>
-
-            {/* CTAs */}
+            {/* Big name top */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-8 flex items-center justify-center gap-4 flex-wrap"
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="overflow-hidden"
             >
-              <Link
-                href="mailto:hi@liamkarlsson.se"
-                className="flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-base font-semibold
-                  text-light hover:border-dark hover:bg-transparent hover:text-dark
-                  dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-                  transition-all duration-200 md:p-2 md:px-4"
+              <h1
+                className="font-black uppercase leading-none text-dark dark:text-light select-none"
+                style={{ fontSize: "clamp(3.5rem, 12vw, 10rem)", letterSpacing: "-0.03em" }}
               >
-                Get in Touch <LinkArrow className="ml-1 !w-5" />
-              </Link>
-              <Link
-                href="/projects"
-                className="text-base font-medium text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light underline underline-offset-4 transition-colors"
+                LIAM
+              </h1>
+            </motion.div>
+
+            {/* Middle row: description left · photo center · desc right */}
+            <div className="relative flex items-end justify-between gap-4 -mt-2 sm:flex-col sm:items-center">
+
+              {/* Left float text */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="w-52 pb-6 sm:w-full sm:text-center sm:pb-0 sm:order-2"
               >
-                View my work
-              </Link>
+                <p className="text-sm text-dark/50 dark:text-light/50 leading-relaxed">
+                  Co-founder of{" "}
+                  <a href="https://rankad.ai" target="_blank" rel="noopener nofollow" className="text-dark dark:text-light font-semibold hover:underline underline-offset-2">Rankad.ai</a>
+                  {" "}& founder of{" "}
+                  <a href="https://lkinnovations.se" target="_blank" rel="noopener nofollow" className="text-dark dark:text-light font-semibold hover:underline underline-offset-2">LK Innovations</a>.
+                </p>
+                <div className="flex gap-3 mt-5 sm:justify-center">
+                  <Link
+                    href="mailto:hi@liamkarlsson.se"
+                    className="flex items-center gap-1.5 rounded-lg border-2 border-solid bg-dark px-4 py-2 text-sm font-semibold text-light hover:bg-transparent hover:text-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light transition-all duration-200"
+                  >
+                    Hire me <LinkArrow className="!w-4" />
+                  </Link>
+                  <Link
+                    href="/projects"
+                    className="flex items-center px-4 py-2 text-sm font-medium text-dark/50 dark:text-light/50 hover:text-dark dark:hover:text-light underline underline-offset-4 transition-colors"
+                  >
+                    Work
+                  </Link>
+                </div>
+              </motion.div>
+
+              {/* Center photo */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+                className="relative flex-shrink-0 sm:order-1"
+                style={{ width: "clamp(220px, 35vw, 440px)" }}
+              >
+                <Image
+                  src={profilePic}
+                  alt="Liam Karlsson"
+                  width={880}
+                  height={1160}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  priority
+                  style={{ objectPosition: "top" }}
+                />
+              </motion.div>
+
+              {/* Right float text */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.25 }}
+                className="w-52 pb-6 text-right sm:w-full sm:text-center sm:pb-0 sm:order-3"
+              >
+                <p className="text-sm text-dark/50 dark:text-light/50 leading-relaxed">
+                  Selected into{" "}
+                  <span className="text-dark dark:text-light font-semibold">The Residency</span>
+                  {" "}San Francisco out of 3,500+ global applicants.
+                </p>
+                <p className="text-sm text-dark/40 dark:text-light/40 leading-relaxed mt-3">
+                  50+ web &amp; SEO projects. Based in Sweden, building in SF.
+                </p>
+              </motion.div>
+
+            </div>
+
+            {/* Big name bottom */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="overflow-hidden -mt-2 text-right"
+            >
+              <h1
+                className="font-black uppercase leading-none text-dark dark:text-light select-none"
+                style={{ fontSize: "clamp(3.5rem, 12vw, 10rem)", letterSpacing: "-0.03em" }}
+              >
+                KARLSSON
+              </h1>
             </motion.div>
 
             {/* AI Chat Widget */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-12 w-full"
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-12 w-full max-w-2xl mx-auto"
             >
               <AIChatHero />
             </motion.div>
