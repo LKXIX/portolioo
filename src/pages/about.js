@@ -36,7 +36,7 @@ function AnimatedNumberFramerMotion({ value }) {
 }
 
 // ─── Age Counter ────────────────────────────────────────────────────────────
-const BIRTHDAY = new Date("2005-06-15T00:00:00");
+const BIRTHDAY = new Date("2005-05-19T00:00:00");
 
 function getAge() {
   const now = new Date();
@@ -70,92 +70,11 @@ const AgeCounter = () => {
           </motion.div>
         ))}
       </div>
-      <p className="text-sm text-dark/50 dark:text-light/50">Born 15 June 2005 · Laholm, Sweden</p>
+      <p className="text-sm text-dark/50 dark:text-light/50">Born 19 May 2005 · Laholm, Sweden</p>
     </div>
   );
 };
 
-// ─── Bookshelf ───────────────────────────────────────────────────────────────
-const books = [
-  { title: "The Lean Startup", author: "Eric Ries", emoji: "📗" },
-  { title: "Zero to One", author: "Peter Thiel", emoji: "📘" },
-  { title: "The Hard Thing About Hard Things", author: "Ben Horowitz", emoji: "📕" },
-  { title: "$100M Offers", author: "Alex Hormozi", emoji: "📙" },
-  { title: "Deep Work", author: "Cal Newport", emoji: "📓" },
-  { title: "Atomic Habits", author: "James Clear", emoji: "📔" },
-];
-
-const Bookshelf = () => (
-  <div className="my-32">
-    <h2 className="font-bold text-8xl mb-16 w-full text-center md:text-6xl xs:text-4xl md:mb-8">Bookshelf</h2>
-    <p className="text-center text-dark/60 dark:text-light/60 mb-10 max-w-xl mx-auto text-sm">
-      Books that have shaped how I think about building, selling, and growing.
-    </p>
-    <div className="grid grid-cols-3 gap-4 lg:grid-cols-2 sm:grid-cols-1">
-      {books.map((b, i) => (
-        <motion.div
-          key={b.title}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: i * 0.07 }}
-          viewport={{ once: true }}
-          className="flex items-center gap-3 p-4 rounded-xl border border-solid border-dark/10 dark:border-light/10 hover:border-primary dark:hover:border-primaryDark transition-colors"
-        >
-          <span className="text-3xl">{b.emoji}</span>
-          <div>
-            <p className="font-semibold text-sm text-dark dark:text-light">{b.title}</p>
-            <p className="text-xs text-dark/50 dark:text-light/50">{b.author}</p>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-);
-
-// ─── 2026 Goals ──────────────────────────────────────────────────────────────
-const goals = [
-  { text: "Get accepted into The Residency, San Francisco", done: true },
-  { text: "Launch Rankad.ai public beta", done: true },
-  { text: "Get featured in Breakit", done: true },
-  { text: "Reach 100 paying customers on Rankad.ai", done: false },
-  { text: "Raise pre-seed funding", done: false },
-  { text: "Grow LK Innovations to 75+ clients", done: false },
-  { text: "Speak at a startup or tech event", done: false },
-  { text: "Complete IT Security degree (Teknikhögskolan)", done: false },
-];
-
-const Goals2026 = () => (
-  <div className="my-32">
-    <h2 className="font-bold text-8xl mb-4 w-full text-center md:text-6xl xs:text-4xl">2026 Goals</h2>
-    <p className="text-center text-dark/60 dark:text-light/60 mb-12 text-sm">Public accountability. Updated in real time.</p>
-    <div className="flex flex-col gap-3 max-w-2xl mx-auto">
-      {goals.map((g, i) => (
-        <motion.div
-          key={g.text}
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ delay: i * 0.06 }}
-          viewport={{ once: true }}
-          className={`flex items-center gap-3 p-4 rounded-xl border border-solid transition-colors
-            ${g.done
-              ? "border-green-500/30 bg-green-500/5"
-              : "border-dark/10 dark:border-light/10"
-            }`}
-        >
-          <span className={`text-lg flex-shrink-0 ${g.done ? "text-green-500" : "text-dark/20 dark:text-light/20"}`}>
-            {g.done ? "✓" : "○"}
-          </span>
-          <span className={`text-sm font-medium ${g.done ? "text-dark/50 dark:text-light/50 line-through" : "text-dark dark:text-light"}`}>
-            {g.text}
-          </span>
-        </motion.div>
-      ))}
-    </div>
-    <p className="text-center text-xs text-dark/30 dark:text-light/30 mt-6">
-      {goals.filter((g) => g.done).length}/{goals.length} completed
-    </p>
-  </div>
-);
 
 // ─── Schemas ─────────────────────────────────────────────────────────────────
 const breadcrumbSchema = {
@@ -359,9 +278,6 @@ export default function About() {
           <Skills />
           <Experience />
           <Education />
-
-          <Bookshelf />
-          <Goals2026 />
 
           {/* FAQ Section — crawlable, schema-backed */}
           <section className="mt-32 w-full" aria-label="Frequently asked questions about Liam Karlsson">

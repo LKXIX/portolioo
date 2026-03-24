@@ -45,7 +45,6 @@ const Footer = () => {
                 { href: "/articles", label: "Achievements" },
                 { href: "/media", label: "Press & Media" },
                 { href: "/blog", label: "Blog" },
-                { href: "/stack", label: "My Stack" },
               ].map(({ href, label }) => (
                 <Link key={href} href={href} className="text-sm text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors w-fit">
                   {label}
@@ -76,8 +75,8 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <span className="text-xs font-bold uppercase tracking-widest text-dark/40 dark:text-light/40">Contact</span>
             <div className="flex flex-col gap-2">
-              <a href="mailto:business@liamkarlsson.com" className="text-sm text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors w-fit">
-                business@liamkarlsson.com
+              <a href="mailto:hi@liamkarlsson.se" className="text-sm text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors w-fit">
+                hi@liamkarlsson.se
               </a>
               <a href="mailto:contact@rankad.ai" className="text-sm text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors w-fit">
                 contact@rankad.ai

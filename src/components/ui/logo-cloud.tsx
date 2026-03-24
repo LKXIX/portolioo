@@ -66,12 +66,12 @@ export function LogoCloud({ logos, label = "As seen in" }: LogoCloudProps) {
                 onMouseEnter={e => {
                   (e.currentTarget as HTMLElement).style.backgroundColor = "#1c1c1c";
                   const img = e.currentTarget.querySelector("img") as HTMLImageElement;
-                  if (img) img.style.opacity = "1";
+                  if (img) { img.style.opacity = "1"; img.style.transform = "scale(1.05)"; }
                 }}
                 onMouseLeave={e => {
                   (e.currentTarget as HTMLElement).style.backgroundColor = isHighlight ? "#111111" : "#0a0a0a";
                   const img = e.currentTarget.querySelector("img") as HTMLImageElement;
-                  if (img) img.style.opacity = "0.5";
+                  if (img) { img.style.opacity = "0.5"; img.style.transform = "scale(1)"; }
                 }}
               >
                 <img
@@ -84,7 +84,7 @@ export function LogoCloud({ logos, label = "As seen in" }: LogoCloudProps) {
                     filter: "brightness(0) invert(1)",
                     opacity: 0.5,
                     display: "block",
-                    transition: "opacity 0.2s",
+                    transition: "opacity 0.2s, transform 0.2s",
                     pointerEvents: "none" as const,
                     userSelect: "none" as const,
                   }}

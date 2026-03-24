@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+import profilePic from "../../public/images/profile/liam2.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
@@ -144,16 +145,47 @@ export default function Home() {
       </Head>
 
       <TransitionEffect />
-      <article className="flex min-h-screen items-center text-dark dark:text-light sm:items-start">
+
+      {/* Dot-grid background */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 0,
+          pointerEvents: "none",
+          backgroundImage: "radial-gradient(circle, rgba(99,102,241,0.13) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+        }}
+      />
+
+      <article className="relative flex min-h-screen items-center text-dark dark:text-light sm:items-start" style={{ zIndex: 1 }}>
         <Layout className="!pt-16 md:!pt-20 sm:!pt-20">
 
           {/* Centered hero */}
           <div className="flex flex-col items-center text-center w-full max-w-3xl mx-auto">
 
+            {/* Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="mb-6"
+            >
+              <Image
+                src={profilePic}
+                alt="Liam Karlsson"
+                width={96}
+                height={96}
+                className="rounded-full object-cover border-2 border-dark/10 dark:border-light/10 shadow-lg"
+                priority
+              />
+            </motion.div>
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="py-2 text-dark dark:text-light text-6xl font-bold capitalize xl:text-5xl md:text-4xl sm:text-3xl"
             >
               Liam Karlsson
@@ -162,7 +194,7 @@ export default function Home() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-4 text-base text-dark/60 dark:text-light/60 leading-relaxed max-w-xl"
             >
               I co-founded{" "}
@@ -178,11 +210,11 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               className="mt-8 flex items-center justify-center gap-4 flex-wrap"
             >
               <Link
-                href="mailto:business@liamkarlsson.com"
+                href="mailto:hi@liamkarlsson.se"
                 className="flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-base font-semibold
                   text-light hover:border-dark hover:bg-transparent hover:text-dark
                   dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
@@ -202,7 +234,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
               className="mt-12 w-full"
             >
               <AIChatHero />
@@ -210,10 +242,23 @@ export default function Home() {
 
           </div>
 
-          <LogoCloud logos={pressLogos} />
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <LogoCloud logos={pressLogos} />
+          </motion.div>
 
           {/* Cal.com inline embed */}
-          <div style={{ marginTop: "5rem" }}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            style={{ marginTop: "5rem" }}
+          >
             <p style={{
               fontSize: "0.65rem",
               fontWeight: 600,
@@ -245,7 +290,7 @@ export default function Home() {
                 `,
               }}
             />
-          </div>
+          </motion.div>
 
         </Layout>
 
