@@ -145,7 +145,7 @@ export default function Home() {
 
       <TransitionEffect />
       <article className="flex min-h-screen items-center text-dark dark:text-light sm:items-start">
-        <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
+        <Layout className="!pt-16 md:!pt-20 sm:!pt-20">
 
           {/* Centered hero */}
           <div className="flex flex-col items-center text-center w-full max-w-3xl mx-auto">
