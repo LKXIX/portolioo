@@ -196,7 +196,7 @@ export default function Home() {
             </motion.div>
 
             {/* ── Stacked layout: names wrap the photo ── */}
-            <div className="relative w-full" style={{ minHeight: "clamp(500px, 90vh, 960px)" }}>
+            <div className="relative w-full" style={{ minHeight: "clamp(340px, 60vh, 640px)" }}>
 
               {/* LIAM — top left, overlaps photo */}
               <motion.h1
@@ -214,8 +214,8 @@ export default function Home() {
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.05 }}
-                className="absolute bottom-0 right-0 font-black uppercase leading-none text-dark dark:text-light select-none z-10 pointer-events-none"
-                style={{ fontSize: "clamp(4rem, 14vw, 11rem)", letterSpacing: "-0.03em" }}
+                className="absolute right-0 font-black uppercase leading-none text-dark dark:text-light select-none z-10 pointer-events-none"
+                style={{ bottom: "-0.15em", fontSize: "clamp(4rem, 14vw, 11rem)", letterSpacing: "-0.03em" }}
               >
                 KARLSSON
               </motion.h1>
@@ -225,7 +225,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-                className="absolute inset-0 flex items-end justify-center pointer-events-none"
+                className="absolute inset-0 flex items-center justify-center pointer-events-none"
               >
                 <Image
                   src={profilePic}
@@ -234,7 +234,7 @@ export default function Home() {
                   height={1000}
                   className="w-auto object-contain object-bottom drop-shadow-2xl"
                   priority
-                  style={{ height: "clamp(500px, 90vh, 960px)", marginBottom: "-2px" }}
+                  style={{ height: "clamp(340px, 60vh, 640px)", marginBottom: "-2px" }}
                 />
               </motion.div>
 
