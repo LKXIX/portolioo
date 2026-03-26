@@ -98,7 +98,7 @@ export default function HowToGetCitedByChatGPT() {
 
           <div className="prose-custom text-dark dark:text-light space-y-6 leading-relaxed">
             <p className="text-xl text-dark/80 dark:text-light/80 font-medium leading-relaxed">
-              When someone asks ChatGPT "what is the best tool for X?" — your brand either appears or it does not. There is no position two. This guide covers exactly what moves the needle.
+              When someone asks ChatGPT &ldquo;what is the best tool for X?&rdquo; &mdash; your brand either appears or it does not. There is no position two. This guide covers exactly what moves the needle.
             </p>
 
             <h2 className="text-3xl font-bold mt-10 mb-4">Step 1: Audit your AI crawler access</h2>
@@ -106,10 +106,10 @@ export default function HowToGetCitedByChatGPT() {
               Before anything else, check whether AI crawlers can access your site. Open your <code className="bg-dark/10 dark:bg-light/10 rounded px-1.5 py-0.5 font-mono text-sm">robots.txt</code> and look for disallow rules targeting:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-dark/80 dark:text-light/80">
-              <li><code className="font-mono text-sm">GPTBot</code> — OpenAI's crawler</li>
-              <li><code className="font-mono text-sm">ClaudeBot</code> — Anthropic's crawler</li>
-              <li><code className="font-mono text-sm">PerplexityBot</code> — Perplexity's crawler</li>
-              <li><code className="font-mono text-sm">GoogleOther</code> — Used for AI Overviews training</li>
+              <li><code className="font-mono text-sm">GPTBot</code> &mdash; OpenAI&apos;s crawler</li>
+              <li><code className="font-mono text-sm">ClaudeBot</code> &mdash; Anthropic&apos;s crawler</li>
+              <li><code className="font-mono text-sm">PerplexityBot</code> &mdash; Perplexity&apos;s crawler</li>
+              <li><code className="font-mono text-sm">GoogleOther</code> &mdash; Used for AI Overviews training</li>
             </ul>
             <p>
               If any of these are blocked, remove the rules. A brand that AI systems cannot crawl is a brand that does not exist in their context window.
@@ -182,7 +182,7 @@ export default function HowToGetCitedByChatGPT() {
             <ul className="list-disc pl-6 space-y-2 text-dark/80 dark:text-light/80">
               <li>Do not stuff your FAQ pages with low-quality questions. AI systems detect thin content.</li>
               <li>Do not rely solely on your own website. Third-party brand signals matter as much as on-site optimisation.</li>
-              <li>Do not block AI crawlers "for privacy reasons" without understanding the trade-off. You are trading AI visibility for marginal data protection.</li>
+              <li>Do not block AI crawlers &ldquo;for privacy reasons&rdquo; without understanding the trade-off. You are trading AI visibility for marginal data protection.</li>
               <li>Do not assume your SEO ranking translates to AI citation. A page at position one in Google is not automatically cited by ChatGPT. They are separate systems.</li>
             </ul>
 
