@@ -247,8 +247,8 @@ export default function Home() {
                 style={{ top: "50%", transform: "translateY(-50%)", maxWidth: "170px" }}
               >
                 <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.6, color: "inherit" }} className="text-dark/70 dark:text-light/70">
-                  "Whether you think you can, or think you can't —{" "}
-                  <em style={{ fontStyle: "normal", borderBottom: "1px solid currentColor" }}>you're right.</em>"
+                  &ldquo;Whether you think you can, or think you can&apos;t &mdash;{" "}
+                  <em style={{ fontStyle: "normal", borderBottom: "1px solid currentColor" }}>you&apos;re right.&rdquo;</em>
                 </p>
               </motion.div>
 

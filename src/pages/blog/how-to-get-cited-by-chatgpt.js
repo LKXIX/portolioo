@@ -117,7 +117,7 @@ export default function HowToGetCitedByChatGPT() {
 
             <h2 className="text-3xl font-bold mt-10 mb-4">Step 2: Create content that directly answers questions</h2>
             <p>
-              AI systems are retrieval machines. They look for content that precisely matches a query's intent. That means your content needs to be structured around questions — not just keywords.
+              AI systems are retrieval machines. They look for content that precisely matches a query&apos;s intent. That means your content needs to be structured around questions &mdash; not just keywords.
             </p>
             <p>
               A practical approach:
@@ -164,7 +164,7 @@ export default function HowToGetCitedByChatGPT() {
               <li><strong>Press coverage</strong> — editorial mentions in industry publications carry significant weight. A single article in a respected outlet outweighs dozens of low-authority links.</li>
               <li><strong>LinkedIn and social profiles</strong> — keep your brand description consistent. AI systems crawl social profiles and use them as reference data.</li>
               <li><strong>Third-party directories and review platforms</strong> — G2, Trustpilot, ProductHunt, Crunchbase. These appear in AI-scraped datasets and reinforce brand legitimacy.</li>
-              <li><strong>Expert roundups and lists</strong> — being named in "top X tools for Y" articles directly feeds into AI category associations.</li>
+              <li><strong>Expert roundups and lists</strong> &mdash; being named in &ldquo;top X tools for Y&rdquo; articles directly feeds into AI category associations.</li>
             </ul>
 
             <h2 className="text-3xl font-bold mt-10 mb-4">Step 5: Monitor and measure</h2>

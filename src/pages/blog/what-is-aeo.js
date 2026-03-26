@@ -123,7 +123,7 @@ export default function WhatIsAEO() {
 
           <div className="prose-custom text-dark dark:text-light space-y-6 leading-relaxed">
             <p className="text-xl text-dark/80 dark:text-light/80 font-medium leading-relaxed">
-              The way people find information is changing. Millions of queries that used to end at a Google results page now end inside ChatGPT, Perplexity, or Google's AI Overviews — and those AI systems cite specific sources. If your brand is not one of them, you have a visibility problem.
+              The way people find information is changing. Millions of queries that used to end at a Google results page now end inside ChatGPT, Perplexity, or Google&apos;s AI Overviews &mdash; and those AI systems cite specific sources. If your brand is not one of them, you have a visibility problem.
             </p>
 
             <h2 className="text-3xl font-bold mt-10 mb-4">What is AEO?</h2>
@@ -139,7 +139,7 @@ export default function WhatIsAEO() {
               Traditional SEO is about ranking. You optimise title tags, build backlinks, improve page speed, and climb toward position one. The user still sees a list of links and decides which to click.
             </p>
             <p>
-              AEO is about <em>being the answer</em>. When someone asks an AI tool "who is the best AI search optimization platform?", the AI does not show ten links. It synthesises an answer and — if your content is structured correctly — it names you.
+              AEO is about <em>being the answer</em>. When someone asks an AI tool &ldquo;who is the best AI search optimization platform?&rdquo;, the AI does not show ten links. It synthesises an answer and &mdash; if your content is structured correctly &mdash; it names you.
             </p>
             <p>
               The key differences:
@@ -148,12 +148,12 @@ export default function WhatIsAEO() {
               <li><strong>Format:</strong> AEO requires clear, direct prose that directly answers questions — not keyword-stuffed landing pages.</li>
               <li><strong>Structure:</strong> FAQ schema, HowTo schema, and clear heading hierarchies signal to AI what your content answers.</li>
               <li><strong>Authority:</strong> AI systems weight authoritative, cited sources. Backlink quality matters more than quantity.</li>
-              <li><strong>Crawlability:</strong> You must allow AI crawlers (GPTBot, ClaudeBot, PerplexityBot) access — many brands block them by accident.</li>
+              <li><strong>Crawlability:</strong> You must allow AI crawlers (GPTBot, ClaudeBot, PerplexityBot) access &mdash; many brands block them by accident.</li>
             </ul>
 
             <h2 className="text-3xl font-bold mt-10 mb-4">Why AEO matters in 2025</h2>
             <p>
-              ChatGPT crossed 300 million weekly active users in early 2025. Perplexity is growing at triple-digit rates year-over-year. Google's AI Overviews now appear at the top of billions of search results. The share of informational queries answered entirely inside an AI interface — without any click — is rising every month.
+              ChatGPT crossed 300 million weekly active users in early 2025. Perplexity is growing at triple-digit rates year-over-year. Google&apos;s AI Overviews now appear at the top of billions of search results. The share of informational queries answered entirely inside an AI interface &mdash; without any click &mdash; is rising every month.
             </p>
             <p>
               Brands that invest in AEO now will compound an advantage that late adopters cannot easily reverse. Being cited by an AI system builds a feedback loop: citation leads to brand mentions, brand mentions build LLM training signal, training signal leads to more citation.
