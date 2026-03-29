@@ -16,19 +16,19 @@ const articleSchema = {
   description,
   datePublished: publishedAt,
   dateModified: publishedAt,
-  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.com" },
-  publisher: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.com" },
-  url: `https://liamkarlsson.com/blog/${slug}`,
-  mainEntityOfPage: { "@type": "WebPage", "@id": `https://liamkarlsson.com/blog/${slug}` },
+  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.se" },
+  publisher: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.se" },
+  url: `https://liamkarlsson.se/blog/${slug}`,
+  mainEntityOfPage: { "@type": "WebPage", "@id": `https://liamkarlsson.se/blog/${slug}` },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.com" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://liamkarlsson.com/blog" },
-    { "@type": "ListItem", position: 3, name: title, item: `https://liamkarlsson.com/blog/${slug}` },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.se" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://liamkarlsson.se/blog" },
+    { "@type": "ListItem", position: 3, name: title, item: `https://liamkarlsson.se/blog/${slug}` },
   ],
 };
 
@@ -80,12 +80,12 @@ export default function WhatIsAEO() {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://liamkarlsson.com/blog/${slug}`} />
-        <meta property="og:image" content="https://liamkarlsson.com/images/profile/liam2.jpg" />
+        <meta property="og:url" content={`https://liamkarlsson.se/blog/${slug}`} />
+        <meta property="og:image" content="https://liamkarlsson.se/images/profile/liam2.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <link rel="canonical" href={`https://liamkarlsson.com/blog/${slug}`} />
+        <link rel="canonical" href={`https://liamkarlsson.se/blog/${slug}`} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

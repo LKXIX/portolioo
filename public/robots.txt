@@ -31,4 +31,4 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-Sitemap: https://liamkarlsson.com/sitemap.xml
+Sitemap: https://liamkarlsson.se/sitemap.xml

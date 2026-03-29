@@ -145,8 +145,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.com" },
-    { "@type": "ListItem", position: 2, name: "Achievements & Certificates", item: "https://liamkarlsson.com/articles" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.se" },
+    { "@type": "ListItem", position: 2, name: "Achievements & Certificates", item: "https://liamkarlsson.se/articles" },
   ],
 };
 
@@ -154,10 +154,10 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   name: "Achievements & Certificates – Liam Karlsson",
-  url: "https://liamkarlsson.com/articles",
+  url: "https://liamkarlsson.se/articles",
   description: "Professional certificates earned by Liam Karlsson in cybersecurity, AI, web development, and networking — including Google Cybersecurity Specialization, Cisco CCNAv7, and Microsoft Career Essentials in Cybersecurity.",
   dateModified: "2025-06-01",
-  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.com" },
+  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.se" },
 };
 
 const faqSchema = {
@@ -204,10 +204,10 @@ export default function Articles() {
         <meta property="og:title" content="Achievements & Certificates – Liam Karlsson" />
         <meta property="og:description" content="20+ professional certificates earned by Liam Karlsson in cybersecurity, AI, web development, and networking." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://liamkarlsson.com/articles" />
-        <meta property="og:image" content="https://liamkarlsson.com/images/profile/liam2.jpg" />
+        <meta property="og:url" content="https://liamkarlsson.se/articles" />
+        <meta property="og:image" content="https://liamkarlsson.se/images/profile/liam2.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://liamkarlsson.com/articles" />
+        <link rel="canonical" href="https://liamkarlsson.se/articles" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

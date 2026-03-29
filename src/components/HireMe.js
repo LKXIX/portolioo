@@ -10,7 +10,7 @@ export const HireMe = () => {
           className={"fill-dark dark:fill-light animate-spin-slow duration-200"}
         />
         <Link
-          href="mailto:business@liamkarlsson.com"
+          href="mailto:liam@rankad.ai"
           data-egg="hireme"
           className="flex items-center justify-center absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] shadow-md border border-solid
 bg-dark rounded-full text-white w-12 h-12 text-[10px] font-semibold text-center leading-tight hover:bg-light hover:border-dark hover:text-dark dark:text-dark dark:bg-light dark:hover:bg-dark

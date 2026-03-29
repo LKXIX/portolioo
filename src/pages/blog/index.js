@@ -10,8 +10,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.com" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://liamkarlsson.com/blog" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.se" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://liamkarlsson.se/blog" },
   ],
 };
 
@@ -19,9 +19,9 @@ const blogListingSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
   name: "Blog – Liam Karlsson",
-  url: "https://liamkarlsson.com/blog",
+  url: "https://liamkarlsson.se/blog",
   description: "Thoughts on AI search optimization, AEO, web development, entrepreneurship, and building startups as a young founder.",
-  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.com" },
+  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.se" },
 };
 
 function formatDate(iso) {
@@ -133,10 +133,10 @@ export default function Blog({ posts }) {
         <meta property="og:title" content="Blog – Liam Karlsson" />
         <meta property="og:description" content="Thoughts on AI search, AEO, and building startups by Liam Karlsson." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://liamkarlsson.com/blog" />
-        <meta property="og:image" content="https://liamkarlsson.com/images/profile/liam2.jpg" />
+        <meta property="og:url" content="https://liamkarlsson.se/blog" />
+        <meta property="og:image" content="https://liamkarlsson.se/images/profile/liam2.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://liamkarlsson.com/blog" />
+        <link rel="canonical" href="https://liamkarlsson.se/blog" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListingSchema) }} />
       </Head>

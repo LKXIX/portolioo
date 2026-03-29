@@ -32,7 +32,7 @@ const ROUTES: Route[] = [
   {
     keywords: ["seo", "search engine", "google", "rank", "traffic", "keyword", "backlink"],
     response: "Through LK Innovations I've delivered SEO for 50+ clients — achieving up to +1100% traffic growth. From technical audits to content strategy and link building. Want to talk strategy?",
-    cta: { label: "Start a project →", href: "mailto:business@liamkarlsson.com" },
+    cta: { label: "Start a project →", href: "mailto:liam@rankad.ai" },
   },
   {
     keywords: ["web", "website", "design", "develop", "next.js", "react", "build", "app", "freelance"],
@@ -57,12 +57,12 @@ const ROUTES: Route[] = [
   {
     keywords: ["price", "pricing", "cost", "quote", "how much", "rate"],
     response: "Pricing depends on scope — a typical website starts around 15,000 SEK. For Rankad.ai, reach out directly for startup and enterprise plans.",
-    cta: { label: "Get a quote →", href: "mailto:business@liamkarlsson.com" },
+    cta: { label: "Get a quote →", href: "mailto:liam@rankad.ai" },
   },
   {
     keywords: ["contact", "email", "hire", "work together", "collaborate", "reach"],
-    response: "Best way to reach me: business@liamkarlsson.com for web projects, or contact@rankad.ai for AI search. I respond within 24 hours.",
-    cta: { label: "Send an email →", href: "mailto:business@liamkarlsson.com" },
+    response: "Best way to reach me: liam@rankad.ai for web projects, or contact@rankad.ai for AI search. I respond within 24 hours.",
+    cta: { label: "Send an email →", href: "mailto:liam@rankad.ai" },
   },
   {
     keywords: ["about", "who are you", "who is liam", "background", "story"],
@@ -91,7 +91,7 @@ const ROUTES: Route[] = [
   {
     keywords: ["help", "what can you do", "options", "capabilities"],
     response: "I can tell you about Rankad.ai and AI search, web development and SEO services, my background, press coverage, or connect you directly. Just ask anything.",
-    cta: { label: "Get in touch →", href: "mailto:business@liamkarlsson.com" },
+    cta: { label: "Get in touch →", href: "mailto:liam@rankad.ai" },
   },
   {
     keywords: ["call", "meeting", "book", "schedule", "calendar", "chat", "talk", "zoom", "demo"],
@@ -103,7 +103,7 @@ const ROUTES: Route[] = [
 const FALLBACK: Route = {
   keywords: [],
   response: "Good question. The best way to get a real answer is to reach out directly — I reply fast.",
-  cta: { label: "Email me →", href: "mailto:business@liamkarlsson.com" },
+  cta: { label: "Email me →", href: "mailto:liam@rankad.ai" },
 };
 
 function getRoute(input: string): Route {

@@ -166,8 +166,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.com" },
-    { "@type": "ListItem", position: 2, name: "Projects", item: "https://liamkarlsson.com/projects" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.se" },
+    { "@type": "ListItem", position: 2, name: "Projects", item: "https://liamkarlsson.se/projects" },
   ],
 };
 
@@ -175,10 +175,10 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   name: "Projects by Liam Karlsson",
-  url: "https://liamkarlsson.com/projects",
+  url: "https://liamkarlsson.se/projects",
   description: "Projects and client work by Liam Karlsson: co-founder of Rankad.ai, founder of LK Innovations AB (50+ delivered websites and SEO projects for Swedish and international clients).",
   dateModified: "2026-03-01",
-  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.com" },
+  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.se" },
 };
 
 const faqSchema = {
@@ -198,7 +198,7 @@ const faqSchema = {
       name: "Can Liam Karlsson build a website for my business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Through LK Innovations AB, Liam Karlsson delivers custom websites and SEO for businesses. The agency has a 4.6 Trustpilot rating and has achieved up to +1100% traffic growth for clients. Contact liam@lkinnovations.se or business@liamkarlsson.com.",
+        text: "Yes. Through LK Innovations AB, Liam Karlsson delivers custom websites and SEO for businesses. The agency has a 4.6 Trustpilot rating and has achieved up to +1100% traffic growth for clients. Contact liam@lkinnovations.se or liam@rankad.ai.",
       },
     },
     {
@@ -228,10 +228,10 @@ export default function Projects() {
         <meta property="og:title" content="Projects – Rankad.ai, LK Innovations & Client Work by Liam Karlsson" />
         <meta property="og:description" content="Co-founder of Rankad.ai. Founder of LK Innovations AB — 50+ client websites and SEO projects with up to +1100% traffic growth." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://liamkarlsson.com/projects" />
-        <meta property="og:image" content="https://liamkarlsson.com/images/profile/liam2.jpg" />
+        <meta property="og:url" content="https://liamkarlsson.se/projects" />
+        <meta property="og:image" content="https://liamkarlsson.se/images/profile/liam2.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://liamkarlsson.com/projects" />
+        <link rel="canonical" href="https://liamkarlsson.se/projects" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -351,7 +351,7 @@ export default function Projects() {
               </div>
               <div>
                 <dt className="font-semibold text-xl text-dark dark:text-light">Can Liam Karlsson build a website for my business?</dt>
-                <dd className="mt-2 text-dark/75 dark:text-light/75">Yes. Through LK Innovations AB, Liam delivers custom websites and SEO with measurable results. The agency has a 4.6 Trustpilot rating. Contact <a href="mailto:liam@lkinnovations.se" className="underline">liam@lkinnovations.se</a> or visit <Link href="/" className="underline underline-offset-2">liamkarlsson.com</Link> to get in touch.</dd>
+                <dd className="mt-2 text-dark/75 dark:text-light/75">Yes. Through LK Innovations AB, Liam delivers custom websites and SEO with measurable results. The agency has a 4.6 Trustpilot rating. Contact <a href="mailto:liam@lkinnovations.se" className="underline">liam@lkinnovations.se</a> or visit <Link href="/" className="underline underline-offset-2">liamkarlsson.se</Link> to get in touch.</dd>
               </div>
               <div>
                 <dt className="font-semibold text-xl text-dark dark:text-light">What tech stack does Liam Karlsson use?</dt>

@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.com" },
-    { "@type": "ListItem", position: 2, name: "Media", item: "https://liamkarlsson.com/media" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.se" },
+    { "@type": "ListItem", position: 2, name: "Media", item: "https://liamkarlsson.se/media" },
   ],
 };
 
@@ -22,10 +22,10 @@ const pageSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   name: "Press & Media – Liam Karlsson",
-  url: "https://liamkarlsson.com/media",
+  url: "https://liamkarlsson.se/media",
   description: "Press coverage and media mentions of Liam Karlsson, co-founder of Rankad.ai and founder of LK Innovations AB. Featured in Hallandsposten, Breakit, Skaraborgs Allehanda, and Yuncture.",
   dateModified: "2026-03-17",
-  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.com" },
+  author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.se" },
 };
 
 const pressArticles = [
@@ -106,10 +106,10 @@ export default function Media() {
         <meta property="og:title" content="Press & Media – Liam Karlsson" />
         <meta property="og:description" content="Press coverage of Liam Karlsson — co-founder of Rankad.ai. Featured in Hallandsposten, Breakit, Skaraborgs Allehanda, and Yuncture." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://liamkarlsson.com/media" />
-        <meta property="og:image" content="https://liamkarlsson.com/images/profile/liam2.jpg" />
+        <meta property="og:url" content="https://liamkarlsson.se/media" />
+        <meta property="og:image" content="https://liamkarlsson.se/images/profile/liam2.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://liamkarlsson.com/media" />
+        <link rel="canonical" href="https://liamkarlsson.se/media" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       </Head>

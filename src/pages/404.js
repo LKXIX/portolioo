@@ -15,7 +15,7 @@ const NotFound = () => {
         <title>Page Not Found – Liam Karlsson</title>
         <meta name="description" content="This page does not exist. Return to Liam Karlsson's portfolio to explore his web development projects, cybersecurity certificates, and experience." />
         <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://liamkarlsson.com" />
+        <link rel="canonical" href="https://liamkarlsson.se" />
       </Head>
       <TransitionEffect />
       <main className="h-[75vh] w-full dark:bg-dark">

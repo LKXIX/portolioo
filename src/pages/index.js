@@ -83,7 +83,7 @@ const faqSchema = {
       name: "How can I contact Liam Karlsson?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For web development and freelance projects, email business@liamkarlsson.com. For Rankad.ai and AI search enquiries, email contact@rankad.ai or call +46 704 81 81 83. Connect on LinkedIn at linkedin.com/in/liamkarlsson.",
+        text: "For web development and freelance projects, email liam@rankad.ai. For Rankad.ai and AI search enquiries, email contact@rankad.ai or call +46 704 81 81 83. Connect on LinkedIn at linkedin.com/in/liamkarlsson.",
       },
     },
     {
@@ -101,12 +101,12 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Liam Karlsson",
-  url: "https://liamkarlsson.com",
-  image: "https://liamkarlsson.com/images/profile/liam2.jpg",
+  url: "https://liamkarlsson.se",
+  image: "https://liamkarlsson.se/images/profile/liam2.jpg",
   jobTitle: "Co-founder & CEO at Rankad.ai | Founder of LK Innovations AB",
   description: "Swedish entrepreneur born 2005. Co-founder of Rankad.ai (AI search optimization platform, selected into The Residency San Francisco). Founder of LK Innovations AB, delivering 50+ web and SEO projects. IT security specialist and futures trader.",
   address: { "@type": "PostalAddress", addressLocality: "Laholm", addressCountry: "SE" },
-  email: "business@liamkarlsson.com",
+  email: "liam@rankad.ai",
   telephone: "+46704818183",
   sameAs: [
     "https://www.linkedin.com/in/liamkarlsson/",
@@ -133,13 +133,13 @@ export default function Home() {
         <meta property="og:title" content="Liam Karlsson – Co-founder of Rankad.ai & Founder of LK Innovations" />
         <meta property="og:description" content="Swedish entrepreneur. Co-founder of Rankad.ai. Founder of LK Innovations AB. Selected into The Residency, San Francisco." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://liamkarlsson.com" />
-        <meta property="og:image" content="https://liamkarlsson.com/images/profile/liam2.jpg" />
+        <meta property="og:url" content="https://liamkarlsson.se" />
+        <meta property="og:image" content="https://liamkarlsson.se/images/profile/liam2.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Liam Karlsson – Rankad.ai & LK Innovations" />
         <meta name="twitter:description" content="Swedish entrepreneur. Co-founder of Rankad.ai. Founder of LK Innovations AB." />
-        <meta name="twitter:image" content="https://liamkarlsson.com/images/profile/liam2.jpg" />
-        <link rel="canonical" href="https://liamkarlsson.com" />
+        <meta name="twitter:image" content="https://liamkarlsson.se/images/profile/liam2.jpg" />
+        <link rel="canonical" href="https://liamkarlsson.se" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       </Head>

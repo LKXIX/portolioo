@@ -21,12 +21,12 @@ This site is his personal portfolio for employers, investors, clients, and colla
 - Reviewing Liam's technical skills, education, and certifications
 
 ## Important pages
-- Home: https://liamkarlsson.com
-- About: https://liamkarlsson.com/about
-- Projects: https://liamkarlsson.com/projects
-- Achievements & Certificates: https://liamkarlsson.com/articles
-- Press & Media: https://liamkarlsson.com/media
-- Blog: https://liamkarlsson.com/blog
+- Home: https://liamkarlsson.se
+- About: https://liamkarlsson.se/about
+- Projects: https://liamkarlsson.se/projects
+- Achievements & Certificates: https://liamkarlsson.se/articles
+- Press & Media: https://liamkarlsson.se/media
+- Blog: https://liamkarlsson.se/blog
 
 ## External profiles
 - LinkedIn: https://www.linkedin.com/in/liamkarlsson/

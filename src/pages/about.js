@@ -81,8 +81,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.com" },
-    { "@type": "ListItem", position: 2, name: "About", item: "https://liamkarlsson.com/about" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.se" },
+    { "@type": "ListItem", position: 2, name: "About", item: "https://liamkarlsson.se/about" },
   ],
 };
 
@@ -93,12 +93,12 @@ const profileSchema = {
   mainEntity: {
     "@type": "Person",
     name: "Liam Karlsson",
-    url: "https://liamkarlsson.com",
-    image: "https://liamkarlsson.com/images/profile/liam2.jpg",
+    url: "https://liamkarlsson.se",
+    image: "https://liamkarlsson.se/images/profile/liam2.jpg",
     jobTitle: "Co-founder & CEO at Rankad.ai | Founder of LK Innovations AB",
     description: "Swedish entrepreneur born 2005. Co-founder of Rankad.ai, an autonomous AI Search Optimization platform selected into The Residency San Francisco. Founder of LK Innovations AB, 50+ client projects delivered. Currently studying IT Security at Teknikhögskolan (2025–2027). Former Account Manager & IT Support Specialist at Axami Systems.",
     address: { "@type": "PostalAddress", addressLocality: "Laholm", addressCountry: "SE" },
-    email: "business@liamkarlsson.com",
+    email: "liam@rankad.ai",
     telephone: "+46704818183",
     knowsAbout: ["AI Search Optimization", "AEO", "SEO", "React", "Next.js", "Node.js", "Cyber Security", "IT Security", "Network Security", "PHP", "MySQL", "Tailwind CSS", "Futures Trading"],
     sameAs: [
@@ -178,10 +178,10 @@ export default function About() {
         <meta property="og:title" content="About Liam Karlsson – Co-founder of Rankad.ai & LK Innovations" />
         <meta property="og:description" content="Swedish entrepreneur. Co-founder of Rankad.ai (AI search optimization). Founder of LK Innovations AB. Selected into The Residency San Francisco." />
         <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://liamkarlsson.com/about" />
-        <meta property="og:image" content="https://liamkarlsson.com/images/profile/liam2.jpg" />
+        <meta property="og:url" content="https://liamkarlsson.se/about" />
+        <meta property="og:image" content="https://liamkarlsson.se/images/profile/liam2.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://liamkarlsson.com/about" />
+        <link rel="canonical" href="https://liamkarlsson.se/about" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

@@ -22,12 +22,12 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Liam Karlsson",
-  url: "https://liamkarlsson.com",
+  url: "https://liamkarlsson.se",
   description: "Personal portfolio of Liam Karlsson — Swedish freelance web developer and cyber security specialist.",
   author: {
     "@type": "Person",
     name: "Liam Karlsson",
-    url: "https://liamkarlsson.com",
+    url: "https://liamkarlsson.se",
     jobTitle: "Freelance Web Developer & Cyber Security Specialist",
     sameAs: [
       "https://www.linkedin.com/in/liamkarlsson/",
@@ -39,10 +39,10 @@ const websiteSchema = {
 const siteNavSchema = {
   "@context": "https://schema.org",
   "@type": "SiteLinksSearchBox",
-  url: "https://liamkarlsson.com",
+  url: "https://liamkarlsson.se",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://liamkarlsson.com/?q={search_term_string}",
+    target: "https://liamkarlsson.se/?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };

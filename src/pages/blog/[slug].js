@@ -92,7 +92,7 @@ export default function BlogPost({ post, related = [] }) {
   const seoDesc = post.seoDescription || post.excerpt || "";
   const coverUrl = post.coverImage?.asset
     ? urlFor(post.coverImage).width(1200).url()
-    : "https://liamkarlsson.com/images/profile/liam2.jpg";
+    : "https://liamkarlsson.se/images/profile/liam2.jpg";
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -102,19 +102,19 @@ export default function BlogPost({ post, related = [] }) {
     image: coverUrl,
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
-    author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.com" },
-    publisher: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.com" },
-    url: `https://liamkarlsson.com/blog/${post.slug?.current || post.slug}`,
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://liamkarlsson.com/blog/${post.slug?.current || post.slug}` },
+    author: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.se" },
+    publisher: { "@type": "Person", name: "Liam Karlsson", url: "https://liamkarlsson.se" },
+    url: `https://liamkarlsson.se/blog/${post.slug?.current || post.slug}`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://liamkarlsson.se/blog/${post.slug?.current || post.slug}` },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.com" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://liamkarlsson.com/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://liamkarlsson.com/blog/${post.slug?.current || post.slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.se" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://liamkarlsson.se/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://liamkarlsson.se/blog/${post.slug?.current || post.slug}` },
     ],
   };
 
@@ -128,13 +128,13 @@ export default function BlogPost({ post, related = [] }) {
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDesc} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://liamkarlsson.com/blog/${canonicalSlug}`} />
+        <meta property="og:url" content={`https://liamkarlsson.se/blog/${canonicalSlug}`} />
         <meta property="og:image" content={coverUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDesc} />
         <meta name="twitter:image" content={coverUrl} />
-        <link rel="canonical" href={`https://liamkarlsson.com/blog/${canonicalSlug}`} />
+        <link rel="canonical" href={`https://liamkarlsson.se/blog/${canonicalSlug}`} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       </Head>
@@ -203,7 +203,7 @@ export default function BlogPost({ post, related = [] }) {
             <div className="flex flex-wrap gap-3 mt-1">
               <Link href="/about" className="text-sm font-semibold underline underline-offset-2 hover:text-primary dark:hover:text-primaryDark">About Liam →</Link>
               <Link href="/projects" className="text-sm font-semibold underline underline-offset-2 hover:text-primary dark:hover:text-primaryDark">Projects →</Link>
-              <a href="mailto:business@liamkarlsson.com" className="text-sm font-semibold underline underline-offset-2 hover:text-primary dark:hover:text-primaryDark">Contact →</a>
+              <a href="mailto:liam@rankad.ai" className="text-sm font-semibold underline underline-offset-2 hover:text-primary dark:hover:text-primaryDark">Contact →</a>
             </div>
           </div>
 

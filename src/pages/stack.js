@@ -73,8 +73,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.com" },
-    { "@type": "ListItem", position: 2, name: "Stack", item: "https://liamkarlsson.com/stack" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://liamkarlsson.se" },
+    { "@type": "ListItem", position: 2, name: "Stack", item: "https://liamkarlsson.se/stack" },
   ],
 };
 
@@ -89,8 +89,8 @@ export default function Stack() {
         <title>My Stack – Liam Karlsson</title>
         <meta name="description" content="The tools, apps, and gear Liam Karlsson uses daily to build Rankad.ai and LK Innovations." />
         <meta property="og:title" content="My Stack – Liam Karlsson" />
-        <meta property="og:url" content="https://liamkarlsson.com/stack" />
-        <link rel="canonical" href="https://liamkarlsson.com/stack" />
+        <meta property="og:url" content="https://liamkarlsson.se/stack" />
+        <link rel="canonical" href="https://liamkarlsson.se/stack" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       </Head>
 
